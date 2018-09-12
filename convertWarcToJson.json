@@ -1,0 +1,610 @@
+{
+  "paragraphs": [
+    {
+      "text": "",
+      "user": "anonymous",
+      "dateUpdated": "2018-08-31 20:01:18.335",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1535664868751_-140395413",
+      "id": "20180830-213428_373796624",
+      "dateCreated": "2018-08-30 21:34:28.751",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%dep\n// load external dependencies\n// You need to restart the Spark interpreter in configuration of this page first in order to make the dependency take effect\nz.load(\"/archive_spark/archivespark_dlrl/libs/stanford-corenlp-3.5.1.jar\")\nz.load(\"/archive_spark/archivespark_dlrl/libs/opennlp-tools-1.9.0.jar\")\nz.load(\"/archive_spark/archivespark_dlrl/libs/en-sent.bin\")",
+      "user": "anonymous",
+      "dateUpdated": "2018-08-31 20:01:18.385",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "ERROR",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Must be used before SparkInterpreter (%spark) initialized\nHint: put this paragraph before any Spark code and restart Zeppelin/Interpreter"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1535652588479_787673589",
+      "id": "20180830-180948_290166523",
+      "dateCreated": "2018-08-30 18:09:48.479",
+      "dateStarted": "2018-08-31 20:01:18.432",
+      "dateFinished": "2018-08-31 20:01:18.476",
+      "status": "ERROR",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "import de.l3s.archivespark._\nimport de.l3s.archivespark.implicits._\nimport de.l3s.archivespark.enrich.functions._\nimport de.l3s.archivespark.specific.warc.implicits._\nimport de.l3s.archivespark.specific.warc.specs.WarcCdxHdfsSpec\nimport de.l3s.archivespark.specific.warc.specs.WarcHdfsSpec\nimport de.l3s.archivespark.specific.warc.enrichfunctions._",
+      "user": "anonymous",
+      "dateUpdated": "2018-08-31 14:45:25.330",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import de.l3s.archivespark._\nimport de.l3s.archivespark.implicits._\nimport de.l3s.archivespark.enrich.functions._\nimport de.l3s.archivespark.specific.warc.implicits._\nimport de.l3s.archivespark.specific.warc.specs.WarcCdxHdfsSpec\nimport de.l3s.archivespark.specific.warc.specs.WarcHdfsSpec\nimport de.l3s.archivespark.specific.warc.enrichfunctions._\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1535652598912_-1982375330",
+      "id": "20180830-180958_754716507",
+      "dateCreated": "2018-08-30 18:09:58.912",
+      "dateStarted": "2018-08-31 14:45:25.462",
+      "dateFinished": "2018-08-31 14:45:35.041",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "// load data from local file system\nval warcPath \u003d \"/share_dir/3_Hurricane_Matthew/warc\"\nval cdxPath \u003d \"/share_dir/3_Hurricane_Matthew/cdx\"\nval records \u003d ArchiveSpark.load(WarcCdxHdfsSpec(cdxPath,warcPath))\n//val recordsd_sample \u003d records.sample(false,0.0001).cache // sample smaller set of data as needed for testing\nrecords.count",
+      "user": "anonymous",
+      "dateUpdated": "2018-08-31 20:01:49.965",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "warcPath: String \u003d /share_dir/3_Hurricane_Matthew/warc\ncdxPath: String \u003d /share_dir/3_Hurricane_Matthew/cdx\nrecords: org.apache.spark.rdd.RDD[de.l3s.archivespark.specific.warc.WarcRecord] \u003d MapPartitionsRDD[47] at mapPartitions at ArchiveSpark.scala:113\nres54: Long \u003d 500\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.17.0.2:4040/jobs/job?id\u003d12"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1535665221596_-1241482587",
+      "id": "20180830-214021_546710085",
+      "dateCreated": "2018-08-30 21:40:21.596",
+      "dateStarted": "2018-08-31 20:01:49.984",
+      "dateFinished": "2018-08-31 20:01:51.158",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nval pages \u003d records.filter(r \u003d\u003e r.mime \u003d\u003d \"text/html\" \u0026\u0026 r.status \u003d\u003d 200) // extract valid webpages\nval earliest \u003d pages.distinctValue(_.surtUrl) {(a, b) \u003d\u003e if (a.time \u003c b.time) a else b} // filter out same urls, pick the latest snap\nval enriched \u003d earliest.enrich(HtmlText) // Enrich with Htmltext\nenriched.peekJson",
+      "user": "anonymous",
+      "dateUpdated": "2018-08-31 20:02:29.916",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "pages: org.apache.spark.rdd.RDD[de.l3s.archivespark.specific.warc.WarcRecord] \u003d MapPartitionsRDD[48] at filter at \u003cconsole\u003e:46\nearliest: org.apache.spark.rdd.RDD[de.l3s.archivespark.specific.warc.WarcRecord] \u003d MapPartitionsRDD[51] at values at GenericHelpersRDD.scala:37\nenriched: org.apache.spark.rdd.RDD[de.l3s.archivespark.specific.warc.WarcRecord] \u003d MapPartitionsRDD[53] at mapPartitions at EnrichableRDD.scala:40\nres56: String \u003d\n{\n  \"record\" : {\n    \"surtUrl\" : \"com,ktla)/tag/national-hurricane-center\",\n    \"timestamp\" : \"20180819001944\",\n    \"originalUrl\" : \"https://ktla.com/tag/national-hurricane-center\",\n    \"mime\" : \"text/html\",\n    \"status\" : 200,\n    \"digest\" : \"SD3TKIOOJAZ2VDFRMEUTVW576RWZFE3Q\",\n    \"redirectUrl\" : \"-\",\n    \"meta\" : \"-\",\n    \"compressedSize\" : 15345\n  },\n  \"payload\" : {\n    \"string\" : {\n      \"html\" : {\n        \"body\" : {\n          \"text\" : \"GoSearch Replay: KTLA 5 Morning News KTLA 5 TV Schedule Watch CW Shows Search Contact Us KTLA Menu News Morning News Video Podcasts Contests Traffic Events About Weather 80° 80° Low 69° High 87° Sun 70° 85° Mon 69° 87° Tue 69° 86° See complete forecast Severe weather alert googletag.cmd.push(function() { googletag.display(\u0027acm-tag-120..."
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.17.0.2:4040/jobs/job?id\u003d13"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1535666469353_72440566",
+      "id": "20180830-220109_541239333",
+      "dateCreated": "2018-08-30 22:01:09.353",
+      "dateStarted": "2018-08-31 20:02:29.938",
+      "dateFinished": "2018-08-31 20:02:31.600",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nval Terms \u003d LowerCase.of(HtmlText).mapMulti(\"terms\") { text: String \u003d\u003e text.split(\"\\\\W+\").distinct } // Define Terms enrichment within HTML body\nval Title \u003d HtmlText.of(Html.first(\"title\")) // Define Title enrichment within HTML body\nval enriched \u003d earliest.enrich(Terms).enrich(Title) // Enrich with Terms and Title\nenriched.peekJson",
+      "user": "anonymous",
+      "dateUpdated": "2018-08-31 20:02:43.109",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Terms: de.l3s.archivespark.enrich.DependentEnrichFunc[de.l3s.archivespark.enrich.EnrichRoot with de.l3s.archivespark.enrich.dataloads.ByteContentLoad,String] with de.l3s.archivespark.enrich.SingleField[Seq[String]] \u003d de.l3s.archivespark.enrich.EnrichFunc$$anon$3@7c932b3\nTitle: de.l3s.archivespark.enrich.EnrichFunc[de.l3s.archivespark.enrich.EnrichRoot with de.l3s.archivespark.enrich.dataloads.ByteContentLoad,String] with de.l3s.archivespark.enrich.DefaultFieldAccess[String,String] \u003d de.l3s.archivespark.enrich.PipedDependentEnrichFuncWithDefaultField@469db25e\nenriched: org.apache.spark.rdd.RDD[de.l3s.archivespark.specific.warc.WarcRecord] \u003d MapPartitionsRDD[57] at mapPartitions at EnrichableRDD.scala:40\nres58: String \u003d\n{\n  \"record\" : {\n    \"surtUrl\" : \"com,ktla)/tag/national-hurricane-center\",\n    \"timestamp\" : \"20180819001944\",\n    \"originalUrl\" : \"https://ktla.com/tag/national-hurricane-center\",\n    \"mime\" : \"text/html\",\n    \"status\" : 200,\n    \"digest\" : \"SD3TKIOOJAZ2VDFRMEUTVW576RWZFE3Q\",\n    \"redirectUrl\" : \"-\",\n    \"meta\" : \"-\",\n    \"compressedSize\" : 15345\n  },\n  \"payload\" : {\n    \"string\" : {\n      \"html\" : {\n        \"body\" : {\n          \"text\" : {\n            \"lowercase\" : {\n              \"terms\" : [ \"gosearch\", \"replay\", \"ktla\", \"5\", \"morning\", \"news\", \"tv\", \"schedule\", \"watch\", \"cw\", \"shows\", \"search\", \"contact\", \"us\", \"menu\", \"video\", \"podcasts\", \"contests\", \"traffic\", \"events\", \"about\", \"weather\", \"80\", \"low\", \"69\", \"high\", \"87\", \"sun\", \"70\", \"85\", \"mon\", \"tue\", \"86\", \"see..."
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.17.0.2:4040/jobs/job?id\u003d14"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1535667138439_893582487",
+      "id": "20180830-221218_879334368",
+      "dateCreated": "2018-08-30 22:12:18.440",
+      "dateStarted": "2018-08-31 20:02:43.130",
+      "dateFinished": "2018-08-31 20:02:44.477",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val result \u003d enriched.map( r \u003d\u003e {\n    val title \u003d r.valueOrElse(Title, \"\").replaceAll(\"[\\\\t\\\\n]\", \" \") // get title value \n    val text \u003d r.valueOrElse(HtmlText, \"\").replaceAll(\"[\\\\t\\\\n]\", \" \") // get text value\n    // concatenate URL, timestamp, title and text with in the format of tuple, tuple can be converted to Dataframe format later\n    (r.originalUrl, r.timestamp,title, text)\n})",
+      "user": "anonymous",
+      "dateUpdated": "2018-08-31 20:02:47.072",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "result: org.apache.spark.rdd.RDD[(String, String, String, String)] \u003d MapPartitionsRDD[58] at map at \u003cconsole\u003e:57\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1535667403808_-1566133575",
+      "id": "20180830-221643_2140596130",
+      "dateCreated": "2018-08-30 22:16:43.808",
+      "dateStarted": "2018-08-31 20:02:47.118",
+      "dateFinished": "2018-08-31 20:02:47.851",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "result.first",
+      "user": "anonymous",
+      "dateUpdated": "2018-08-31 14:45:46.190",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res14: (String, String, String, String) \u003d (https://ktla.com/tag/national-hurricane-center,20180819001944,national hurricane center | KTLA,GoSearch Replay: KTLA 5 Morning News KTLA 5 TV Schedule Watch CW Shows Search Contact Us KTLA Menu News Morning News Video Podcasts Contests Traffic Events About Weather 80° 80° Low 69° High 87° Sun 70° 85° Mon 69° 87° Tue 69° 86° See complete forecast Severe weather alert googletag.cmd.push(function() { googletag.display(\u0027acm-tag-120x60-atf\u0027); }); googletag.cmd.push(function() { googletag.display(\u0027acm-tag-728x90-atf\u0027); }); national hurricane center Nation/World Hurricane Nate Makes Landfall in Mississippi After Hitting Louisiana Nation/World Hurricane Maria Strengthens to Category 5 as Storm Nears Puerto Rico Nation/World Hurricane Jose’s Twisting Pa..."
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.17.0.2:4040/jobs/job?id\u003d3"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1535671197904_-1855847394",
+      "id": "20180830-231957_1096396672",
+      "dateCreated": "2018-08-30 23:19:57.904",
+      "dateStarted": "2018-08-31 14:45:46.285",
+      "dateFinished": "2018-08-31 14:45:47.088",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val result_df \u003d result.toDF(\"originalUrl\",\"timestamp\",\"title\",\"text\") // convert to DataFrame format inorder to export Json format and perform SQL queries as needed",
+      "user": "anonymous",
+      "dateUpdated": "2018-08-31 20:02:55.374",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "result_df: org.apache.spark.sql.DataFrame \u003d [originalUrl: string, timestamp: string ... 2 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1535671323368_-2042192341",
+      "id": "20180830-232203_2109420355",
+      "dateCreated": "2018-08-30 23:22:03.368",
+      "dateStarted": "2018-08-31 20:02:55.413",
+      "dateFinished": "2018-08-31 20:02:56.300",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "result_df.show",
+      "user": "anonymous",
+      "dateUpdated": "2018-08-31 20:02:59.916",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------------------+--------------+--------------------+--------------------+\n|         originalUrl|     timestamp|               title|                text|\n+--------------------+--------------+--------------------+--------------------+\n|https://ktla.com/...|20180819001944|national hurrican...|GoSearch Replay: ...|\n|http://www.huffin...|20180819001642|     403 - Forbidden|     403 - Forbidden|\n|https://ktla.com/...|20180819001906|Hurricane Irma, N...|GoSearch Replay: ...|\n|https://www.nbcne...|20180819002201|Triple Threat: Hu...|Subscribe to Brea...|\n|https://globalnew...|20180819002152|Hurricane Irma: W...|/* */ if ( \u0027funct...|\n|https://globalnew...|20180819002238|Hurricane Watch |...|{{data.title}} Sp...|\n|https://ktla.com/...|20180819001847|Category 2 Irma B...|GoSearch Replay: ...|\n|https://www.cbsne...|20180819002110|Hurricane Matthew...|@font-face{font-f...|\n|https://uk.busine...|20180819002251|Hurricane Irma 20...|Business Insider ...|\n|https://www.washi...|20180819001934|Hurricane Irma re...|1 Desktop notific...|\n|https://www.washi...|20180819001936|Hurricane season ...|Sections Home Dem...|\n|http://www.foxnew...|20180819001432|Powerful Hurrican...|Fox News Fox Busi...|\n|https://www.cbsne...|20180819001956|UN soldiers - Hur...|@font-face{font-f...|\n|https://www.thegu...|20180819002134|\u0027You can\u0027t hide f...|Skip to main cont...|\n|http://www.nbcmia...|20180819001844|Category 1 Hurric...|//must have for c...|\n|https://www.washi...|20180819001923|Extreme Hurricane...|Sections Home Dem...|\n|http://wapo.st/2j...|20180819002115|Hurricane Irma te...|1 Desktop notific...|\n|https://globalnew...|20180819002154|Hurricane Irma st...|{{data.title}} Sp...|\n|http://www.nbcmia...|20180819001653|Killer Hurricane ...|//must have for c...|\n|https://globalnew...|20180819002207|‘Potentially cata...|/* */ if ( \u0027funct...|\n+--------------------+--------------+--------------------+--------------------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.17.0.2:4040/jobs/job?id\u003d15"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1535673948005_-2050989624",
+      "id": "20180831-000548_1620698995",
+      "dateCreated": "2018-08-31 00:05:48.005",
+      "dateStarted": "2018-08-31 20:02:59.955",
+      "dateFinished": "2018-08-31 20:03:01.199",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "result_df.head()",
+      "user": "anonymous",
+      "dateUpdated": "2018-08-31 20:03:13.710",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res64: org.apache.spark.sql.Row \u003d [https://ktla.com/tag/national-hurricane-center,20180819001944,national hurricane center | KTLA,GoSearch Replay: KTLA 5 Morning News KTLA 5 TV Schedule Watch CW Shows Search Contact Us KTLA Menu News Morning News Video Podcasts Contests Traffic Events About Weather 80° 80° Low 69° High 87° Sun 70° 85° Mon 69° 87° Tue 69° 86° See complete forecast Severe weather alert googletag.cmd.push(function() { googletag.display(\u0027acm-tag-120x60-atf\u0027); }); googletag.cmd.push(function() { googletag.display(\u0027acm-tag-728x90-atf\u0027); }); national hurricane center Nation/World Hurricane Nate Makes Landfall in Mississippi After Hitting Louisiana Nation/World Hurricane Maria Strengthens to Category 5 as Storm Nears Puerto Rico Nation/World Hurricane Jose’s Twisting Path May B..."
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.17.0.2:4040/jobs/job?id\u003d16"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1535745448428_1268600473",
+      "id": "20180831-195728_1205109061",
+      "dateCreated": "2018-08-31 19:57:28.428",
+      "dateStarted": "2018-08-31 20:03:13.741",
+      "dateFinished": "2018-08-31 20:03:14.296",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "result_df.repartition(1).write.mode(\"overwrite\").format(\"json\").save(\"/share_dir/3_Hurricane_Matthew/json\") // export data to your local path",
+      "user": "anonymous",
+      "dateUpdated": "2018-08-31 20:04:31.369",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.17.0.2:4040/jobs/job?id\u003d17"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1535674363244_507726696",
+      "id": "20180831-001243_68372385",
+      "dateCreated": "2018-08-31 00:12:43.244",
+      "dateStarted": "2018-08-31 20:04:31.388",
+      "dateFinished": "2018-08-31 20:04:37.871",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "result_df.show",
+      "user": "anonymous",
+      "dateUpdated": "2018-08-31 20:19:17.975",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {}
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------------------+--------------+--------------------+--------------------+\n|         originalUrl|     timestamp|               title|                text|\n+--------------------+--------------+--------------------+--------------------+\n|https://ktla.com/...|20180819001944|national hurrican...|GoSearch Replay: ...|\n|http://www.huffin...|20180819001642|     403 - Forbidden|     403 - Forbidden|\n|https://ktla.com/...|20180819001906|Hurricane Irma, N...|GoSearch Replay: ...|\n|https://www.nbcne...|20180819002201|Triple Threat: Hu...|Subscribe to Brea...|\n|https://globalnew...|20180819002152|Hurricane Irma: W...|/* */ if ( \u0027funct...|\n|https://globalnew...|20180819002238|Hurricane Watch |...|{{data.title}} Sp...|\n|https://ktla.com/...|20180819001847|Category 2 Irma B...|GoSearch Replay: ...|\n|https://www.cbsne...|20180819002110|Hurricane Matthew...|@font-face{font-f...|\n|https://uk.busine...|20180819002251|Hurricane Irma 20...|Business Insider ...|\n|https://www.washi...|20180819001934|Hurricane Irma re...|1 Desktop notific...|\n|https://www.washi...|20180819001936|Hurricane season ...|Sections Home Dem...|\n|http://www.foxnew...|20180819001432|Powerful Hurrican...|Fox News Fox Busi...|\n|https://www.cbsne...|20180819001956|UN soldiers - Hur...|@font-face{font-f...|\n|https://www.thegu...|20180819002134|\u0027You can\u0027t hide f...|Skip to main cont...|\n|http://www.nbcmia...|20180819001844|Category 1 Hurric...|//must have for c...|\n|https://www.washi...|20180819001923|Extreme Hurricane...|Sections Home Dem...|\n|http://wapo.st/2j...|20180819002115|Hurricane Irma te...|1 Desktop notific...|\n|https://globalnew...|20180819002154|Hurricane Irma st...|{{data.title}} Sp...|\n|http://www.nbcmia...|20180819001653|Killer Hurricane ...|//must have for c...|\n|https://globalnew...|20180819002207|‘Potentially cata...|/* */ if ( \u0027funct...|\n+--------------------+--------------+--------------------+--------------------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.17.0.2:4040/jobs/job?id\u003d18"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1535674809432_996746656",
+      "id": "20180831-002009_1953880331",
+      "dateCreated": "2018-08-31 00:20:09.432",
+      "dateStarted": "2018-08-31 20:19:18.012",
+      "dateFinished": "2018-08-31 20:19:18.982",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "user": "anonymous",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1535745286515_-679861774",
+      "id": "20180831-195446_1561035519",
+      "dateCreated": "2018-08-31 19:54:46.516",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "ConvertWarcToJson",
+  "id": "2DN7N339R",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}
