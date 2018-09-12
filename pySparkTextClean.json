@@ -1,0 +1,428 @@
+{
+  "paragraphs": [
+    {
+      "text": "%python.conda install -c anaconda nltk",
+      "user": "anonymous",
+      "dateUpdated": "2018-09-04 15:09:58.571",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "sh",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/sh"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003ch4\u003ePackage Installation\u003c/h4\u003e\n\u003c/div\u003e\u003cbr /\u003e\n\u003cdiv style\u003d\"white-space:pre-wrap;\"\u003e\nSolving environment: ...working... done\n\n\n\u003d\u003d\u003e WARNING: A newer version of conda exists. \u003c\u003d\u003d\n  current version: 4.5.10\n  latest version: 4.5.11\n\nPlease update conda by running\n\n    $ conda update -n base conda\n\n\n\nopenssl-1.0.2p       | 3.5 MB    |            |   0% \nopenssl-1.0.2p       | 3.5 MB    |            |   0% \nopenssl-1.0.2p       | 3.5 MB    | 1          |   1% \nopenssl-1.0.2p       | 3.5 MB    | 2          |   2% \nopenssl-1.0.2p       | 3.5 MB    | 3          |   3% \nopenssl-1.0.2p       | 3.5 MB    | 3          |   4% \nopenssl-1.0.2p       | 3.5 MB    | 4          |   4% \nopenssl-1.0.2p       | 3.5 MB    | 5          |   5% \nopenssl-1.0.2p       | 3.5 MB    | 5          |   6% \nopenssl-1.0.2p       | 3.5 MB    | 6          |   7% \nopenssl-1.0.2p       | 3.5 MB    | 7          |   7% \nopenssl-1.0.2p       | 3.5 MB    | 8          |   8% \nopenssl-1.0.2p       | 3.5 MB    | 8          |   9% \nopenssl-1.0.2p       | 3.5 MB    | 9          |  10% \nopenssl-1.0.2p       | 3.5 MB    | #          |  10% \nopenssl-1.0.2p       | 3.5 MB    | #          |  11% \nopenssl-1.0.2p       | 3.5 MB    | #1         |  12% \nopenssl-1.0.2p       | 3.5 MB    | #2         |  13% \nopenssl-1.0.2p       | 3.5 MB    | #3         |  13% \nopenssl-1.0.2p       | 3.5 MB    | #3         |  14% \nopenssl-1.0.2p       | 3.5 MB    | #4         |  15% \nopenssl-1.0.2p       | 3.5 MB    | #5         |  15% \nopenssl-1.0.2p       | 3.5 MB    | #5         |  16% \nopenssl-1.0.2p       | 3.5 MB    | #6         |  17% \nopenssl-1.0.2p       | 3.5 MB    | #7         |  17% \nopenssl-1.0.2p       | 3.5 MB    | #7         |  18% \nopenssl-1.0.2p       | 3.5 MB    | #8         |  19% \nopenssl-1.0.2p       | 3.5 MB    | #9         |  19% \nopenssl-1.0.2p       | 3.5 MB    | ##         |  20% \nopenssl-1.0.2p       | 3.5 MB    | ##         |  21% \nopenssl-1.0.2p       | 3.5 MB    | ##1        |  21% \nopenssl-1.0.2p       | 3.5 MB    | ##2        |  22% \nopenssl-1.0.2p       | 3.5 MB    | ##2        |  23% \nopenssl-1.0.2p       | 3.5 MB    | ##3        |  23% \nopenssl-1.0.2p       | 3.5 MB    | ##4        |  24% \nopenssl-1.0.2p       | 3.5 MB    | ##4        |  24% \nopenssl-1.0.2p       | 3.5 MB    | ##5        |  25% \nopenssl-1.0.2p       | 3.5 MB    | ##5        |  25% \nopenssl-1.0.2p       | 3.5 MB    | ##5        |  26% \nopenssl-1.0.2p       | 3.5 MB    | ##6        |  26% \nopenssl-1.0.2p       | 3.5 MB    | ##7        |  27% \nopenssl-1.0.2p       | 3.5 MB    | ##7        |  28% \nopenssl-1.0.2p       | 3.5 MB    | ##8        |  29% \nopenssl-1.0.2p       | 3.5 MB    | ##9        |  30% \nopenssl-1.0.2p       | 3.5 MB    | ###        |  30% \nopenssl-1.0.2p       | 3.5 MB    | ###        |  31% \nopenssl-1.0.2p       | 3.5 MB    | ###1       |  32% \nopenssl-1.0.2p       | 3.5 MB    | ###2       |  32% \nopenssl-1.0.2p       | 3.5 MB    | ###2       |  33% \nopenssl-1.0.2p       | 3.5 MB    | ###3       |  34% \nopenssl-1.0.2p       | 3.5 MB    | ###4       |  34% \nopenssl-1.0.2p       | 3.5 MB    | ###5       |  35% \nopenssl-1.0.2p       | 3.5 MB    | ###5       |  36% \nopenssl-1.0.2p       | 3.5 MB    | ###6       |  37% \nopenssl-1.0.2p       | 3.5 MB    | ###7       |  37% \nopenssl-1.0.2p       | 3.5 MB    | ###8       |  38% \nopenssl-1.0.2p       | 3.5 MB    | ###8       |  39% \nopenssl-1.0.2p       | 3.5 MB    | ###9       |  39% \nopenssl-1.0.2p       | 3.5 MB    | ####       |  40% \nopenssl-1.0.2p       | 3.5 MB    | ####1      |  41% \nopenssl-1.0.2p       | 3.5 MB    | ####1      |  42% \nopenssl-1.0.2p       | 3.5 MB    | ####2      |  43% \nopenssl-1.0.2p       | 3.5 MB    | ####3      |  44% \nopenssl-1.0.2p       | 3.5 MB    | ####4      |  44% \nopenssl-1.0.2p       | 3.5 MB    | ####5      |  45% \nopenssl-1.0.2p       | 3.5 MB    | ####5      |  46% \nopenssl-1.0.2p       | 3.5 MB    | ####6      |  47% \nopenssl-1.0.2p       | 3.5 MB    | ####7      |  47% \nopenssl-1.0.2p       | 3.5 MB    | ####7      |  48% \nopenssl-1.0.2p       | 3.5 MB    | ####8      |  49% \nopenssl-1.0.2p       | 3.5 MB    | ####9      |  49% \nopenssl-1.0.2p       | 3.5 MB    | ####9      |  50% \nopenssl-1.0.2p       | 3.5 MB    | #####      |  51% \nopenssl-1.0.2p       | 3.5 MB    | #####1     |  51% \nopenssl-1.0.2p       | 3.5 MB    | #####1     |  52% \nopenssl-1.0.2p       | 3.5 MB    | #####2     |  53% \nopenssl-1.0.2p       | 3.5 MB    | #####3     |  53% \nopenssl-1.0.2p       | 3.5 MB    | #####3     |  54% \nopenssl-1.0.2p       | 3.5 MB    | #####4     |  55% \nopenssl-1.0.2p       | 3.5 MB    | #####5     |  55% \nopenssl-1.0.2p       | 3.5 MB    | #####6     |  56% \nopenssl-1.0.2p       | 3.5 MB    | #####6     |  57% \nopenssl-1.0.2p       | 3.5 MB    | #####7     |  57% \nopenssl-1.0.2p       | 3.5 MB    | #####8     |  58% \nopenssl-1.0.2p       | 3.5 MB    | #####8     |  59% \nopenssl-1.0.2p       | 3.5 MB    | #####9     |  59% \nopenssl-1.0.2p       | 3.5 MB    | ######     |  60% \nopenssl-1.0.2p       | 3.5 MB    | ######     |  61% \nopenssl-1.0.2p       | 3.5 MB    | ######1    |  61% \nopenssl-1.0.2p       | 3.5 MB    | ######2    |  62% \nopenssl-1.0.2p       | 3.5 MB    | ######2    |  63% \nopenssl-1.0.2p       | 3.5 MB    | ######3    |  63% \nopenssl-1.0.2p       | 3.5 MB    | ######4    |  65% \nopenssl-1.0.2p       | 3.5 MB    | ######5    |  65% \nopenssl-1.0.2p       | 3.5 MB    | ######6    |  66% \nopenssl-1.0.2p       | 3.5 MB    | ######6    |  67% \nopenssl-1.0.2p       | 3.5 MB    | ######7    |  68% \nopenssl-1.0.2p       | 3.5 MB    | ######8    |  68% \nopenssl-1.0.2p       | 3.5 MB    | ######8    |  69% \nopenssl-1.0.2p       | 3.5 MB    | ######9    |  70% \nopenssl-1.0.2p       | 3.5 MB    | #######    |  71% \nopenssl-1.0.2p       | 3.5 MB    | #######1   |  71% \nopenssl-1.0.2p       | 3.5 MB    | #######1   |  72% \nopenssl-1.0.2p       | 3.5 MB    | #######2   |  73% \nopenssl-1.0.2p       | 3.5 MB    | #######3   |  73% \nopenssl-1.0.2p       | 3.5 MB    | #######4   |  74% \nopenssl-1.0.2p       | 3.5 MB    | #######4   |  75% \nopenssl-1.0.2p       | 3.5 MB    | #######5   |  76% \nopenssl-1.0.2p       | 3.5 MB    | #######6   |  76% \nopenssl-1.0.2p       | 3.5 MB    | #######6   |  77% \nopenssl-1.0.2p       | 3.5 MB    | #######7   |  78% \nopenssl-1.0.2p       | 3.5 MB    | #######9   |  79% \nopenssl-1.0.2p       | 3.5 MB    | ########2  |  83% \nopenssl-1.0.2p       | 3.5 MB    | ########7  |  87% \nopenssl-1.0.2p       | 3.5 MB    | #########2 |  93% \nopenssl-1.0.2p       | 3.5 MB    | #########6 |  97% \nopenssl-1.0.2p       | 3.5 MB    | ########## | 100% \n\nca-certificates-2018 | 124 KB    |            |   0% \nca-certificates-2018 | 124 KB    | 9          |  10% \nca-certificates-2018 | 124 KB    | #9         |  19% \nca-certificates-2018 | 124 KB    | ###8       |  39% \nca-certificates-2018 | 124 KB    | #####8     |  58% \nca-certificates-2018 | 124 KB    | #######5   |  75% \nca-certificates-2018 | 124 KB    | ########## | 100% \n\n## Package Plan ##\n\n  environment location: /opt/conda\n\n  added / updated specs: \n    - nltk\n\n\nThe following packages will be downloaded:\n\n    package                    |            build\n    ---------------------------|-----------------\n    openssl-1.0.2p             |       h14c3975_0         3.5 MB  anaconda\n    ca-certificates-2018.03.07 |                0         124 KB  anaconda\n    ------------------------------------------------------------\n                                           Total:         3.6 MB\n\nThe following NEW packages will be INSTALLED:\n\n    ca-certificates: 2018.03.07-0 anaconda\n\nThe following packages will be UPDATED:\n\n    openssl:         1.0.2k-0              --\u003e 1.0.2p-h14c3975_0 anaconda\n\n\nDownloading and Extracting Packages\nPreparing transaction: ...working... done\nVerifying transaction: ...working... done\nExecuting transaction: ...working... done\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1536073733149_-1823009767",
+      "id": "20180904-150853_918181166",
+      "dateCreated": "2018-09-04 15:08:53.149",
+      "dateStarted": "2018-09-04 15:09:58.599",
+      "dateFinished": "2018-09-04 15:10:59.528",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nimport nltk #import nltk package\nnltk.download(\u0027punkt\u0027)\nnltk.download(\u0027averaged_perceptron_tagger\u0027)",
+      "user": "anonymous",
+      "dateUpdated": "2018-09-08 19:21:14.656",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "[nltk_data] Downloading package punkt to /root/nltk_data...\n[nltk_data]   Package punkt is already up-to-date!\n[nltk_data] Downloading package averaged_perceptron_tagger to\n[nltk_data]     /root/nltk_data...\n[nltk_data]   Package averaged_perceptron_tagger is already up-to-\n[nltk_data]       date!\nTrue\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1536073757957_1246072801",
+      "id": "20180904-150917_1871778904",
+      "dateCreated": "2018-09-04 15:09:17.957",
+      "dateStarted": "2018-09-08 19:21:14.677",
+      "dateFinished": "2018-09-08 19:21:29.638",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\npath \u003d \"/share_dir/3_Hurricane_Matthew/json/*.json\"\nhtmlDF \u003d spark.read.json(path)",
+      "user": "anonymous",
+      "dateUpdated": "2018-09-08 19:21:23.489",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "runtimeInfos": {},
+      "apps": [],
+      "jobName": "paragraph_1536073885444_-2130990186",
+      "id": "20180904-151125_145645354",
+      "dateCreated": "2018-09-04 15:11:25.444",
+      "dateStarted": "2018-09-08 19:21:23.516",
+      "dateFinished": "2018-09-08 19:21:33.861",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nhtmlDF.show(5)",
+      "user": "anonymous",
+      "dateUpdated": "2018-09-08 19:21:26.715",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------------------+--------------------+--------------+--------------------+\n|         originalUrl|                text|     timestamp|               title|\n+--------------------+--------------------+--------------+--------------------+\n|https://ktla.com/...|GoSearch Replay: ...|20180819001944|national hurrican...|\n|http://www.huffin...|     403 - Forbidden|20180819001642|     403 - Forbidden|\n|https://ktla.com/...|GoSearch Replay: ...|20180819001906|Hurricane Irma, N...|\n|https://www.nbcne...|Subscribe to Brea...|20180819002201|Triple Threat: Hu...|\n|https://globalnew...|/* */ if ( \u0027funct...|20180819002152|Hurricane Irma: W...|\n+--------------------+--------------------+--------------+--------------------+\nonly showing top 5 rows\n\n"
+          }
+        ]
+      },
+      "runtimeInfos": {},
+      "apps": [],
+      "jobName": "paragraph_1536073938201_-526857665",
+      "id": "20180904-151218_14856708",
+      "dateCreated": "2018-09-04 15:12:18.201",
+      "dateStarted": "2018-09-08 19:21:30.204",
+      "dateFinished": "2018-09-08 19:21:34.143",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ntext \u003d htmlDF.select(\"text\")\nfirst_line \u003d text.first()[0]\nhtmlDF.select(\u0027originalUrl\u0027).take(10)",
+      "user": "anonymous",
+      "dateUpdated": "2018-09-08 19:21:41.330",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "[Row(originalUrl\u003du\u0027https://ktla.com/tag/national-hurricane-center\u0027), Row(originalUrl\u003du\u0027http://www.huffingtonpost.com/entry/bahamas-water-receded-hurricane-irma_us_59b49f1de4b0dfaafcf84e86?section\u003dus_green\u0027), Row(originalUrl\u003du\u0027https://ktla.com/2017/09/09/hurricane-irma-now-category-4-begins-lashing-florida-after-slamming-cuba\u0027), Row(originalUrl\u003du\u0027https://www.nbcnews.com/storyline/hurricane-irma/triple-threat-hurricanes-irma-jose-katia-visible-space-n799606\u0027), Row(originalUrl\u003du\u0027https://globalnews.ca/news/3731103/hurricane-irma-what-has-happened-what-is-coming\u0027), Row(originalUrl\u003du\u0027https://globalnews.ca/tag/hurricane-watch\u0027), Row(originalUrl\u003du\u0027https://ktla.com/2017/09/10/hurricane-irma-makes-landfall-over-the-florida-keys\u0027), Row(originalUrl\u003du\u0027https://www.cbsnews.com/pictures/hurricane-matthew-powerful-atlantic-storm/76\u0027), Row(originalUrl\u003du\u0027https://uk.businessinsider.com/category/hurricane-irma-2017\u0027), Row(originalUrl\u003du\u0027https://www.washingtonpost.com/news/post-nation/wp/2017/09/09/never-seen-anything-like-it-governor-issues-new-warning-as-florida-sees-first-signs-of-hurricane-irmas-winds-and-rain\u0027)]\n"
+          }
+        ]
+      },
+      "runtimeInfos": {},
+      "apps": [],
+      "jobName": "paragraph_1536073955332_372784940",
+      "id": "20180904-151235_1992650336",
+      "dateCreated": "2018-09-04 15:12:35.332",
+      "dateStarted": "2018-09-08 19:21:41.360",
+      "dateFinished": "2018-09-08 19:21:41.667",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ntokens \u003d nltk.word_tokenize(first_line) # tokenize text\ntokens\ntagged \u003d nltk.pos_tag(tokens) # tag some text\ntagged[0:6]",
+      "user": "anonymous",
+      "dateUpdated": "2018-09-08 19:21:49.677",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "[(u\u0027GoSearch\u0027, \u0027NNP\u0027), (u\u0027Replay\u0027, \u0027NNP\u0027), (u\u0027:\u0027, \u0027:\u0027), (u\u0027KTLA\u0027, \u0027NNP\u0027), (u\u00275\u0027, \u0027CD\u0027), (u\u0027Morning\u0027, \u0027NNP\u0027)]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1536074012256_-189932757",
+      "id": "20180904-151332_1410239358",
+      "dateCreated": "2018-09-04 15:13:32.256",
+      "dateStarted": "2018-09-08 19:21:49.700",
+      "dateFinished": "2018-09-08 19:21:50.145",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n# test map job on all elements\ntext_string \u003d text.rdd.map(lambda x: x.text)\n#text_string.first()\n\ndef tokenize_tag(lines):\n    tokens \u003d nltk.word_tokenize(lines) # tokenize text\n    tagged \u003d nltk.pos_tag(tokens) #tag some text\n    return tagged\n\nall_strings \u003d text_string.map(lambda x: nltk.word_tokenize(x))\nall_strings.first()\n\n#all_tokens \u003d text_string.map(tokenize_tag)\n#all_tokens.first()",
+      "user": "anonymous",
+      "dateUpdated": "2018-09-08 19:21:55.791",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "[u\u0027GoSearch\u0027, u\u0027Replay\u0027, u\u0027:\u0027, u\u0027KTLA\u0027, u\u00275\u0027, u\u0027Morning\u0027, u\u0027News\u0027, u\u0027KTLA\u0027, u\u00275\u0027, u\u0027TV\u0027, u\u0027Schedule\u0027, u\u0027Watch\u0027, u\u0027CW\u0027, u\u0027Shows\u0027, u\u0027Search\u0027, u\u0027Contact\u0027, u\u0027Us\u0027, u\u0027KTLA\u0027, u\u0027Menu\u0027, u\u0027News\u0027, u\u0027Morning\u0027, u\u0027News\u0027, u\u0027Video\u0027, u\u0027Podcasts\u0027, u\u0027Contests\u0027, u\u0027Traffic\u0027, u\u0027Events\u0027, u\u0027About\u0027, u\u0027Weather\u0027, u\u002780\\xb0\u0027, u\u002780\\xb0\u0027, u\u0027Low\u0027, u\u002769\\xb0\u0027, u\u0027High\u0027, u\u002787\\xb0\u0027, u\u0027Sun\u0027, u\u002770\\xb0\u0027, u\u002785\\xb0\u0027, u\u0027Mon\u0027, u\u002769\\xb0\u0027, u\u002787\\xb0\u0027, u\u0027Tue\u0027, u\u002769\\xb0\u0027, u\u002786\\xb0\u0027, u\u0027See\u0027, u\u0027complete\u0027, u\u0027forecast\u0027, u\u0027Severe\u0027, u\u0027weather\u0027, u\u0027alert\u0027, u\u0027googletag.cmd.push\u0027, u\u0027(\u0027, u\u0027function\u0027, u\u0027(\u0027, u\u0027)\u0027, u\u0027{\u0027, u\u0027googletag.display\u0027, u\u0027(\u0027, u\"\u0027acm-tag-120x60-atf\", u\"\u0027\", u\u0027)\u0027, u\u0027;\u0027, u\u0027}\u0027, u\u0027)\u0027, u\u0027;\u0027, u\u0027googletag.cmd.push\u0027, u\u0027(\u0027, u\u0027function\u0027, u\u0027(\u0027, u\u0027)\u0027, u\u0027{\u0027, u\u0027googletag.display\u0027, u\u0027(\u0027, u\"\u0027acm-tag-728x90-atf\", u\"\u0027\", u\u0027)\u0027, u\u0027;\u0027, u\u0027}\u0027, u\u0027)\u0027, u\u0027;\u0027, u\u0027national\u0027, u\u0027hurricane\u0027, u\u0027center\u0027, u\u0027Nation/World\u0027, u\u0027Hurricane\u0027, u\u0027Nate\u0027, u\u0027Makes\u0027, u\u0027Landfall\u0027, u\u0027in\u0027, u\u0027Mississippi\u0027, u\u0027After\u0027, u\u0027Hitting\u0027, u\u0027Louisiana\u0027, u\u0027Nation/World\u0027, u\u0027Hurricane\u0027, u\u0027Maria\u0027, u\u0027Strengthens\u0027, u\u0027to\u0027, u\u0027Category\u0027, u\u00275\u0027, u\u0027as\u0027, u\u0027Storm\u0027, u\u0027Nears\u0027, u\u0027Puerto\u0027, u\u0027Rico\u0027, u\u0027Nation/World\u0027, u\u0027Hurricane\u0027, u\u0027Jose\u0027, u\u0027\\u2019\u0027, u\u0027s\u0027, u\u0027Twisting\u0027, u\u0027Path\u0027, u\u0027May\u0027, u\u0027Bring\u0027, u\u0027it\u0027, u\u0027Back\u0027, u\u0027Toward\u0027, u\u0027the\u0027, u\u0027Bahamas\u0027, u\u0027and\u0027, u\u0027U.S.\u0027, u\u0027Nation/World\u0027, u\u0027Floridians\u0027, u\u0027Prepare\u0027, u\u0027Their\u0027, u\u0027Homes\u0027, u\u0027,\u0027, u\u0027Jam\u0027, u\u0027Highways\u0027, u\u0027to\u0027, u\u0027Flee\u0027, u\u0027Wrath\u0027, u\u0027of\u0027, u\u0027Hurricane\u0027, u\u0027Irma\u0027, u\u0027Nation/World\u0027, u\u0027Puerto\u0027, u\u0027Rico\u0027, u\u0027Nervously\u0027, u\u0027Awaits\u0027, u\u0027Category\u0027, u\u00275\u0027, u\u0027Hurricane\u0027, u\u0027Irma\u0027, u\u0027,\u0027, u\u0027Which\u0027, u\u0027Is\u0027, u\u0027Already\u0027, u\u0027Blamed\u0027, u\u0027for\u0027, u\u0027at\u0027, u\u0027Least\u0027, u\u00273\u0027, u\u0027Deaths\u0027, u\u0027googletag.cmd.push\u0027, u\u0027(\u0027, u\u0027function\u0027, u\u0027(\u0027, u\u0027)\u0027, u\u0027{\u0027, u\u0027googletag.display\u0027, u\u0027(\u0027, u\"\u0027acm-tag-300x250-btf\", u\"\u0027\", u\u0027)\u0027, u\u0027;\u0027, u\u0027}\u0027, u\u0027)\u0027, u\u0027;\u0027, u\u0027Nation/World\u0027, u\u0027\\u2018\u0027, u\u0027Potentially\u0027, u\u0027Catastrophic\u0027, u\u0027\\u2019\u0027, u\u0027Hurricane\u0027, u\u0027Irma\u0027, u\u0027Nears\u0027, u\u0027Leeward\u0027, u\u0027Islands\u0027, u\u0027After\u0027, u\u0027Strengthening\u0027, u\u0027to\u0027, u\u0027Category\u0027, u\u00275\u0027, u\u0027Storm\u0027, u\u0027Nation/World\u0027, u\u0027Powerful\u0027, u\u0027Hurricane\u0027, u\u0027Irma\u0027, u\u0027,\u0027, u\u0027Developing\u0027, u\u0027Over\u0027, u\u0027Atlantic\u0027, u\u0027,\u0027, u\u0027Could\u0027, u\u0027Be\u0027, u\u0027Next\u0027, u\u0027Weather\u0027, u\u0027Disaster\u0027, u\u0027Nation/World\u0027, u\u002737\u0027, u\u0027Dead\u0027, u\u0027in\u0027, u\u0027Hurricane\u0027, u\u0027Harvey\u0027, u\u0027;\u0027, u\u0027\\u2018\u0027, u\u0027Whole\u0027, u\u0027City\u0027, u\u0027\\u2026\u0027, u\u0027Underwater\u0027, u\u0027\\u2019\u0027, u\u0027After\u0027, u\u00272nd\u0027, u\u0027Landfall\u0027, u\u0027at\u0027, u\u0027Louisiana\u0027, u\u0027Border\u0027, u\u0027Nation/World\u0027, u\u00273\u0027, u\u0027Dead\u0027, u\u0027in\u0027, u\u0027Florida\u0027, u\u0027as\u0027, u\u0027Hurricane\u0027, u\u0027Matthew\u0027, u\u0027,\u0027, u\u0027Downgraded\u0027, u\u0027to\u0027, u\u0027Category\u0027, u\u00272\u0027, u\u0027Storm\u0027, u\u0027,\u0027, u\u0027Approaches\u0027, u\u0027Georgia\u0027, u\u0027and\u0027, u\u0027the\u0027, u\u0027Carolinas\u0027, u\u0027googletag.cmd.push\u0027, u\u0027(\u0027, u\u0027function\u0027, u\u0027(\u0027, u\u0027)\u0027, u\u0027{\u0027, u\u0027googletag.display\u0027, u\u0027(\u0027, u\"\u0027acm-tag-728x90-btf\", u\"\u0027\", u\u0027)\u0027, u\u0027;\u0027, u\u0027}\u0027, u\u0027)\u0027, u\u0027;\u0027, u\u0027Mobile\u0027, u\u0027Apps\u0027, u\u0027Android\u0027, u\u0027App\u0027, u\u0027iPhone\u0027, u\u0027\u0026\u0027, u\u0027iPad\u0027, u\u0027App\u0027, u\u0027KTLA\u0027, u\u00275\u0027, u\u0027News\u0027, u\u0027on\u0027, u\u0027Social\u0027, u\u0027Media\u0027, u\u0027Watch\u0027, u\u0027CW\u0027, u\u0027Shows\u0027, u\u0027Facebook\u0027, u\u0027Twitter\u0027, u\u0027Instagram\u0027, u\u0027Email\u0027, u\u0027Alerts\u0027, u\u0027About\u0027, u\u0027\u0026\u0027, u\u0027Contact\u0027, u\u0027Untitled-2\u0027, u\u0027Covers\u0027, u\u0027Online\u0027, u\u0027Public\u0027, u\u0027File\u0027, u\u0027\\u2022\u0027, u\u0027Terms\u0027, u\u0027of\u0027, u\u0027Service\u0027, u\u0027\\u2022\u0027, u\u0027Privacy\u0027, u\u0027Policy\u0027, u\u0027\\u2022\u0027, u\u00275800\u0027, u\u0027Sunset\u0027, u\u0027Blvd\u0027, u\u0027.\u0027, u\u0027Los\u0027, u\u0027Angeles\u0027, u\u0027,\u0027, u\u0027CA\u0027, u\u0027,\u0027, u\u002790028\u0027, u\u0027\\u2022\u0027, u\u0027Copyright\u0027, u\u0027\\xa9\u0027, u\u00272018\u0027, u\u0027,\u0027, u\u0027KTLA\u0027, u\u0027\\u2022\u0027, u\u0027A\u0027, u\u0027Tribune\u0027, u\u0027Broadcasting\u0027, u\u0027Station\u0027, u\u0027\\u2022\u0027, u\u0027Powered\u0027, u\u0027by\u0027, u\u0027WordPress.com\u0027, u\u0027VIP\u0027, u\u0027\\xd7\u0027, u\u0027Email\u0027, u\u0027Alerts\u0027, u\u0027//\u0027, u\u0027var\u0027, u\u0027infiniteScroll\u0027, u\u0027\u003d\u0027, u\u0027{\u0027, u\u0027``\u0027, u\u0027settings\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\u0027{\u0027, u\u0027``\u0027, u\u0027id\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\u0027stories-infinite\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027ajaxurl\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\u0027https\u0027, u\u0027:\u0027, u\u0027\\\\/\\\\/ktla.com\\\\/\u0027, u\u0027?\u0027, u\u0027infinity\u003dscrolling\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027type\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\u0027click\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027wrapper\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\u0027false\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027wrapper_class\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\u0027infinite-wrap\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027footer\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\u0027false\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027click_handle\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\u00271\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027text\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\u0027Load\u0027, u\u0027More\u0027, u\u0027Stories\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027totop\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\u0027Scroll\u0027, u\u0027back\u0027, u\u0027to\u0027, u\u0027top\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027currentday\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\u002707.10.17\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027order\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\u0027DESC\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027scripts\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\u0027[\u0027, u\u0027]\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027styles\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\u0027[\u0027, u\u0027]\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027google_analytics\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\u0027false\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027offset\u0027, u\"\u0027\u0027\", u\u0027:0\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027history\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\u0027{\u0027, u\u0027``\u0027, u\u0027host\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\u0027ktla.com\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027path\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\u0027\\\\/tag\\\\/national-hurricane-center\\\\/page\\\\/\u0027, u\u0027%\u0027, u\u0027d\\\\/\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027use_trailing_slashes\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\u0027true\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027parameters\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\"\u0027\u0027\", u\u0027}\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027query_args\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\u0027{\u0027, u\u0027``\u0027, u\u0027tag\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\u0027national-hurricane-center\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027error\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027m\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027p\u0027, u\"\u0027\u0027\", u\u0027:0\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027post_parent\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027subpost\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027subpost_id\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027attachment\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027attachment_id\u0027, u\"\u0027\u0027\", u\u0027:0\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027name\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027pagename\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027page_id\u0027, u\"\u0027\u0027\", u\u0027:0\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027second\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027minute\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027hour\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027day\u0027, u\"\u0027\u0027\", u\u0027:0\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027monthnum\u0027, u\"\u0027\u0027\", u\u0027:0\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027year\u0027, u\"\u0027\u0027\", u\u0027:0\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027w\u0027, u\"\u0027\u0027\", u\u0027:0\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027category_name\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027cat\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027tag_id\u0027, u\"\u0027\u0027\", u\u0027:783291\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027author\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027author_name\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027feed\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027tb\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027paged\u0027, u\"\u0027\u0027\", u\u0027:0\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027meta_key\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027meta_value\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027preview\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027s\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027sentence\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027title\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027fields\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027menu_order\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027embed\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027category__in\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\u0027[\u0027, u\u0027]\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027category__not_in\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\u0027[\u0027, u\u0027]\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027category__and\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\u0027[\u0027, u\u0027]\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027post__in\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\u0027[\u0027, u\u0027]\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027post__not_in\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\u0027[\u0027, u\u0027]\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027post_name__in\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\u0027[\u0027, u\u0027]\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027tag__in\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\u0027[\u0027, u\u0027]\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027tag__not_in\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\u0027[\u0027, u\u0027]\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027tag__and\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\u0027[\u0027, u\u0027]\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027tag_slug__in\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\u0027[\u0027, u\u0027``\u0027, u\u0027national-hurricane-center\u0027, u\"\u0027\u0027\", u\u0027]\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027tag_slug__and\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\u0027[\u0027, u\u0027]\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027post_parent__in\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\u0027[\u0027, u\u0027]\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027post_parent__not_in\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\u0027[\u0027, u\u0027]\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027author__in\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\u0027[\u0027, u\u0027]\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027author__not_in\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\u0027[\u0027, u\u0027]\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027posts_per_page\u0027, u\"\u0027\u0027\", u\u0027:9\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027no_found_rows\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\u0027true\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027orderby\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\u0027modified\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027post_status\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\u0027publish\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027ignore_sticky_posts\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\u0027false\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027suppress_filters\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\u0027false\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027cache_results\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\u0027false\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027update_post_term_cache\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\u0027true\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027lazy_load_term_meta\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\u0027true\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027update_post_meta_cache\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\u0027true\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027post_type\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027nopaging\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\u0027false\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027comments_per_page\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\u002730\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027order\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\u0027DESC\u0027, u\"\u0027\u0027\", u\u0027}\u0027, u\u0027,\u0027, u\"\u0027\u0027\", u\u0027last_post_date\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\u00272016-10-07\u0027, u\u002714:13:37\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027stats\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\u0027blog\u003d41641936\u0027, u\u0027\u0026\u0027, u\u0027v\u003dwpcom\u0027, u\u0027\u0026\u0027, u\u0027tz\u003d-7\u0027, u\u0027\u0026\u0027, u\u0027user_id\u003d0\u0027, u\u0027\u0026\u0027, u\u0027subd\u003dtribktla\u0027, u\u0027\u0026\u0027, u\u0027x_pagetype\u003dinfinite-click\u0027, u\"\u0027\u0027\", u\u0027}\u0027, u\u0027}\u0027, u\u0027;\u0027, u\u0027//\u0027, u\u0027window._taboola\u0027, u\u0027\u003d\u0027, u\u0027window._taboola\u0027, u\u0027||\u0027, u\u0027[\u0027, u\u0027]\u0027, u\u0027;\u0027, u\u0027_taboola.push\u0027, u\u0027(\u0027, u\u0027{\u0027, u\u0027flush\u0027, u\u0027:\u0027, u\u0027true\u0027, u\u0027}\u0027, u\u0027)\u0027, u\u0027;\u0027, u\u0027var\u0027, u\u0027_comscore\u0027, u\u0027\u003d\u0027, u\u0027_comscore\u0027, u\u0027||\u0027, u\u0027[\u0027, u\u0027]\u0027, u\u0027;\u0027, u\u0027_comscore.push\u0027, u\u0027(\u0027, u\u0027{\u0027, u\u0027c1\u0027, u\u0027:\u0027, u\u0027``\u0027, u\u00272\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\u0027c2\u0027, u\u0027:\u0027, u\u0027``\u0027, u\u002718314522\u0027, u\"\u0027\u0027\", u\u0027}\u0027, u\u0027)\u0027, u\u0027;\u0027, u\u0027(\u0027, u\u0027function\u0027, u\u0027(\u0027, u\u0027)\u0027, u\u0027{\u0027, u\u0027var\u0027, u\u0027s\u0027, u\u0027\u003d\u0027, u\u0027document.createElement\u0027, u\u0027(\u0027, u\u0027``\u0027, u\u0027script\u0027, u\"\u0027\u0027\", u\u0027)\u0027, u\u0027,\u0027, u\u0027el\u0027, u\u0027\u003d\u0027, u\u0027document.getElementsByTagName\u0027, u\u0027(\u0027, u\u0027``\u0027, u\u0027script\u0027, u\"\u0027\u0027\", u\u0027)\u0027, u\u0027[\u0027, u\u00270\u0027, u\u0027]\u0027, u\u0027;\u0027, u\u0027s.async\u0027, u\u0027\u003d\u0027, u\u0027true\u0027, u\u0027;\u0027, u\u0027s.src\u0027, u\u0027\u003d\u0027, u\u0027(\u0027, u\u0027document.location.protocol\u0027, u\u0027\u003d\u003d\u0027, u\u0027``\u0027, u\u0027https\u0027, u\u0027:\u0027, u\"\u0027\u0027\", u\u0027?\u0027, u\u0027``\u0027, u\u0027https\u0027, u\u0027:\u0027, u\u0027//sb\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\u0027``\u0027, u\u0027http\u0027, u\u0027:\u0027, u\u0027//b\u0027, u\"\u0027\u0027\", u\u0027)\u0027, u\u0027+\u0027, u\u0027``\u0027, u\u0027.scorecardresearch.com/beacon.js\u0027, u\"\u0027\u0027\", u\u0027;\u0027, u\u0027el.parentNode.insertBefore\u0027, u\u0027(\u0027, u\u0027s\u0027, u\u0027,\u0027, u\u0027el\u0027, u\u0027)\u0027, u\u0027;\u0027, u\u0027}\u0027, u\u0027)\u0027, u\u0027(\u0027, u\u0027)\u0027, u\u0027;\u0027, u\u0027(\u0027, u\u0027function\u0027, u\u0027(\u0027, u\u0027i\u0027, u\u0027,\u0027, u\u0027s\u0027, u\u0027,\u0027, u\u0027o\u0027, u\u0027,\u0027, u\u0027g\u0027, u\u0027,\u0027, u\u0027r\u0027, u\u0027,\u0027, u\u0027a\u0027, u\u0027,\u0027, u\u0027m\u0027, u\u0027)\u0027, u\u0027{\u0027, u\u0027i\u0027, u\u0027[\u0027, u\"\u0027GoogleAnalyticsObject\", u\"\u0027\", u\u0027]\u0027, u\u0027\u003dr\u0027, u\u0027;\u0027, u\u0027i\u0027, u\u0027[\u0027, u\u0027r\u0027, u\u0027]\u0027, u\u0027\u003di\u0027, u\u0027[\u0027, u\u0027r\u0027, u\u0027]\u0027, u\u0027||function\u0027, u\u0027(\u0027, u\u0027)\u0027, u\u0027{\u0027, u\u0027(\u0027, u\u0027i\u0027, u\u0027[\u0027, u\u0027r\u0027, u\u0027]\u0027, u\u0027.q\u003di\u0027, u\u0027[\u0027, u\u0027r\u0027, u\u0027]\u0027, u\u0027.q||\u0027, u\u0027[\u0027, u\u0027]\u0027, u\u0027)\u0027, u\u0027.push\u0027, u\u0027(\u0027, u\u0027arguments\u0027, u\u0027)\u0027, u\u0027}\u0027, u\u0027,\u0027, u\u0027i\u0027, u\u0027[\u0027, u\u0027r\u0027, u\u0027]\u0027, u\u0027.l\u003d1*new\u0027, u\u0027Date\u0027, u\u0027(\u0027, u\u0027)\u0027, u\u0027;\u0027, u\u0027a\u003ds.createElement\u0027, u\u0027(\u0027, u\u0027o\u0027, u\u0027)\u0027, u\u0027,\u0027, u\u0027m\u003ds.getElementsByTagName\u0027, u\u0027(\u0027, u\u0027o\u0027, u\u0027)\u0027, u\u0027[\u0027, u\u00270\u0027, u\u0027]\u0027, u\u0027;\u0027, u\u0027a.async\u003d1\u0027, u\u0027;\u0027, u\u0027a.src\u003dg\u0027, u\u0027;\u0027, u\u0027m.parentNode.insertBefore\u0027, u\u0027(\u0027, u\u0027a\u0027, u\u0027,\u0027, u\u0027m\u0027, u\u0027)\u0027, u\u0027}\u0027, u\u0027)\u0027, u\u0027(\u0027, u\u0027window\u0027, u\u0027,\u0027, u\u0027document\u0027, u\u0027,\u0027, u\"\u0027script\", u\"\u0027\", u\u0027,\u0027, u\"\u0027//www.google-analytics.com/analytics.js\", u\"\u0027\", u\u0027,\u0027, u\"\u0027sharedGa\", u\"\u0027\", u\u0027)\u0027, u\u0027;\u0027, u\u0027sharedGa\u0027, u\u0027(\u0027, u\"\u0027create\", u\"\u0027\", u\u0027,\u0027, u\"\u0027UA-56989624-1\", u\"\u0027\", u\u0027,\u0027, u\"\u0027auto\", u\"\u0027\", u\u0027)\u0027, u\u0027;\u0027, u\u0027sharedGa\u0027, u\u0027(\u0027, u\"\u0027send\", u\"\u0027\", u\u0027,\u0027, u\"\u0027pageview\", u\"\u0027\", u\u0027)\u0027, u\u0027;\u0027, u\u0027var\u0027, u\u0027_sf_async_config\u003d\u0027, u\u0027{\u0027, u\u0027}\u0027, u\u0027;\u0027, u\u0027_sf_async_config.uid\u0027, u\u0027\u003d\u0027, u\u0027``\u0027, u\u002715066\u0027, u\"\u0027\u0027\", u\u0027;\u0027, u\u0027_sf_async_config.domain\u0027, u\u0027\u003d\u0027, u\u0027``\u0027, u\u0027ktla.com\u0027, u\"\u0027\u0027\", u\u0027;\u0027, u\u0027_sf_async_config.useCanonical\u0027, u\u0027\u003d\u0027, u\u0027``\u0027, u\u0027true\u0027, u\"\u0027\u0027\", u\u0027;\u0027, u\u0027(\u0027, u\u0027function\u0027, u\u0027(\u0027, u\u0027)\u0027, u\u0027{\u0027, u\u0027function\u0027, u\u0027loadChartbeat\u0027, u\u0027(\u0027, u\u0027)\u0027, u\u0027{\u0027, u\u0027window._sf_endpt\u003d\u0027, u\u0027(\u0027, u\u0027new\u0027, u\u0027Date\u0027, u\u0027(\u0027, u\u0027)\u0027, u\u0027)\u0027, u\u0027.getTime\u0027, u\u0027(\u0027, u\u0027)\u0027, u\u0027;\u0027, u\u0027var\u0027, u\u0027e\u0027, u\u0027\u003d\u0027, u\u0027document.createElement\u0027, u\u0027(\u0027, u\"\u0027script\", u\"\u0027\", u\u0027)\u0027, u\u0027;\u0027, u\u0027e.setAttribute\u0027, u\u0027(\u0027, u\"\u0027language\", u\"\u0027\", u\u0027,\u0027, u\"\u0027javascript\", u\"\u0027\", u\u0027)\u0027, u\u0027;\u0027, u\u0027e.setAttribute\u0027, u\u0027(\u0027, u\"\u0027type\", u\"\u0027\", u\u0027,\u0027, u\"\u0027text/javascript\", u\"\u0027\", u\u0027)\u0027, u\u0027;\u0027, u\u0027e.setAttribute\u0027, u\u0027(\u0027, u\"\u0027src\", u\"\u0027\", u\u0027,\u0027, u\u0027``\u0027, u\u0027\\\\/\\\\/static.chartbeat.com\\\\/js\\\\/chartbeat.js\u0027, u\"\u0027\u0027\", u\u0027)\u0027, u\u0027;\u0027, u\u0027document.body.appendChild\u0027, u\u0027(\u0027, u\u0027e\u0027, u\u0027)\u0027, u\u0027;\u0027, u\u0027}\u0027, u\u0027var\u0027, u\u0027oldonload\u0027, u\u0027\u003d\u0027, u\u0027window.onload\u0027, u\u0027;\u0027, u\u0027window.onload\u0027, u\u0027\u003d\u0027, u\u0027(\u0027, u\u0027typeof\u0027, u\u0027window.onload\u0027, u\u0027!\u0027, u\u0027\u003d\u0027, u\"\u0027function\", u\"\u0027\", u\u0027)\u0027, u\u0027?\u0027, u\u0027loadChartbeat\u0027, u\u0027:\u0027, u\u0027function\u0027, u\u0027(\u0027, u\u0027)\u0027, u\u0027{\u0027, u\u0027try\u0027, u\u0027{\u0027, u\u0027oldonload\u0027, u\u0027(\u0027, u\u0027)\u0027, u\u0027;\u0027, u\u0027}\u0027, u\u0027catch\u0027, u\u0027(\u0027, u\u0027e\u0027, u\u0027)\u0027, u\u0027{\u0027, u\u0027loadChartbeat\u0027, u\u0027(\u0027, u\u0027)\u0027, u\u0027;\u0027, u\u0027throw\u0027, u\u0027e\u0027, u\u0027}\u0027, u\u0027loadChartbeat\u0027, u\u0027(\u0027, u\u0027)\u0027, u\u0027;\u0027, u\u0027}\u0027, u\u0027;\u0027, u\u0027}\u0027, u\u0027)\u0027, u\u0027(\u0027, u\u0027)\u0027, u\u0027;\u0027, u\u0027\u003c\u0027, u\u0027%\u0027, u\u0027if\u0027, u\u0027(\u0027, u\u0027featured_image_url\u0027, u\u0027!\u0027, u\u0027\u003d\u003d\u0027, u\u0027``\u0027, u\u0027)\u0027, u\u0027{\u0027, u\u0027%\u0027, u\u0027\u003e\u0027, u\u0027\u003c\u0027, u\u0027%\u0027, u\u0027}\u0027, u\u0027%\u0027, u\u0027\u003e\u0027, u\u0027\u003c\u0027, u\u0027%\u0027, u\u0027\u003dtitle\u0027, u\u0027%\u0027, u\u0027\u003e\u0027, u\u0027\u003c\u0027, u\u0027%\u0027, u\u0027-date\u0027, u\u0027%\u0027, u\u0027\u003e\u0027, u\u0027\u003c\u0027, u\u0027%\u0027, u\u0027\u003dexcerpt\u0027, u\u0027%\u0027, u\u0027\u003e\u0027, u\u0027Read\u0027, u\u0027more\u0027, u\u0027\\u203a\u0027, u\u0027googletag.cmd.push\u0027, u\u0027(\u0027, u\u0027function\u0027, u\u0027(\u0027, u\u0027)\u0027, u\u0027{\u0027, u\u0027googletag.display\u0027, u\u0027(\u0027, u\"\u0027acm-tag-oop\", u\"\u0027\", u\u0027)\u0027, u\u0027;\u0027, u\u0027}\u0027, u\u0027)\u0027, u\u0027;\u0027, u\u0027var\u0027, u\u0027cb\u0027, u\u0027\u003d\u0027, u\u0027function\u0027, u\u0027(\u0027, u\u0027)\u0027, u\u0027{\u0027, u\u0027if\u0027, u\u0027(\u0027, u\u0027pbjs.initAdserverSet\u0027, u\u0027)\u0027, u\u0027{\u0027, u\u0027googletag.cmd.push\u0027, u\u0027(\u0027, u\u0027function\u0027, u\u0027(\u0027, u\u0027)\u0027, u\u0027{\u0027, u\u0027if\u0027, u\u0027(\u0027, u\u0027ACMBatches.secondBatchTags.length\u0027, u\u0027)\u0027, u\u0027{\u0027, u\u0027googletag.pubads\u0027, u\u0027(\u0027, u\u0027)\u0027, u\u0027.refresh\u0027, u\u0027(\u0027, u\u0027ACMBatches.secondBatchTags\u0027, u\u0027,\u0027, u\u0027{\u0027, u\u0027changeCorrelator\u0027, u\u0027:\u0027, u\u0027false\u0027, u\u0027}\u0027, u\u0027)\u0027, u\u0027;\u0027, u\u0027}\u0027, u\u0027}\u0027, u\u0027)\u0027, u\u0027;\u0027, u\u0027clearInterval\u0027, u\u0027(\u0027, u\u0027adRefInterval\u0027, u\u0027)\u0027, u\u0027}\u0027, u\u0027}\u0027, u\u0027;\u0027, u\u0027var\u0027, u\u0027adRefInterval\u0027, u\u0027\u003d\u0027, u\u0027setInterval\u0027, u\u0027(\u0027, u\u0027cb\u0027, u\u0027,\u0027, u\u0027200\u0027, u\u0027)\u0027, u\u0027;\u0027, u\u0027/*\u0027, u\u0027*/\u0027, u\u0027var\u0027, u\u0027TrbTv\u0027, u\u0027\u003d\u0027, u\u0027{\u0027, u\u0027``\u0027, u\u0027subscribeUrl\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\u0027http\u0027, u\u0027:\u0027, u\u0027\\\\/\\\\/cdn.tribtv.com\\\\/ktla\\\\/widgets\\\\/alertspage.html\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027sharingEnabled\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027isArticle\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027isMobile\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027lazyCtx\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\"\u0027\u0027\", u\u0027}\u0027, u\u0027;\u0027, u\u0027/*\u0027, u\u0027*/\u0027, u\u0027/*\u0027, u\u0027*/\u0027, u\u0027var\u0027, u\u0027wpcomVipAnalytics\u0027, u\u0027\u003d\u0027, u\u0027{\u0027, u\u0027``\u0027, u\u0027is_404\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\u00270\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027is_home\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\u00270\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027is_single\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\u00270\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027is_front_page\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\u00270\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027is_archive\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\u00271\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027percentToTrack\u0027, u\"\u0027\u0027\", u\u0027:\u0027, u\"\u0027\u0027\", u\u00271\u0027, u\"\u0027\u0027\", u\u0027}\u0027, u\u0027;\u0027, u\u0027/*\u0027, u\u0027*/\u0027, u\u0027//\u0027, u\u0027(\u0027, u\u0027function\u0027, u\u0027(\u0027, u\u0027)\u0027, u\u0027{\u0027, u\u0027try\u0027, u\u0027{\u0027, u\u0027if\u0027, u\u0027(\u0027, u\u0027window.external\u0027, u\u0027\u0026\u0027, u\u0027\u0026\u0027, u\"\u0027msIsSiteMode\", u\"\u0027\", u\u0027in\u0027, u\u0027window.external\u0027, u\u0027)\u0027, u\u0027{\u0027, u\u0027if\u0027, u\u0027(\u0027, u\u0027window.external.msIsSiteMode\u0027, u\u0027(\u0027, u\u0027)\u0027, u\u0027)\u0027, u\u0027{\u0027, u\u0027var\u0027, u\u0027jl\u0027, u\u0027\u003d\u0027, u\u0027document.createElement\u0027, u\u0027(\u0027, u\"\u0027script\", u\"\u0027\", u\u0027)\u0027, u\u0027;\u0027, u\"jl.type\u003d\u0027text/javascript\", u\"\u0027\", u\u0027;\u0027, u\u0027jl.async\u003dtrue\u0027, u\u0027;\u0027, u\"jl.src\u003d\u0027/wp-content/plugins/ie-sitemode/custom-jumplist.php\", u\"\u0027\", u\u0027;\u0027, u\u0027var\u0027, u\u0027s\u0027, u\u0027\u003d\u0027, u\u0027document.getElementsByTagName\u0027, u\u0027(\u0027, u\"\u0027script\", u\"\u0027\", u\u0027)\u0027, u\u0027[\u0027, u\u00270\u0027, u\u0027]\u0027, u\u0027;\u0027, u\u0027s.parentNode.insertBefore\u0027, u\u0027(\u0027, u\u0027jl\u0027, u\u0027,\u0027, u\u0027s\u0027, u\u0027)\u0027, u\u0027;\u0027, u\u0027}\u0027, u\u0027}\u0027, u\u0027}\u0027, u\u0027catch\u0027, u\u0027(\u0027, u\u0027e\u0027, u\u0027)\u0027, u\u0027{\u0027, u\u0027}\u0027, u\u0027}\u0027, u\u0027)\u0027, u\u0027(\u0027, u\u0027)\u0027, u\u0027;\u0027, u\u0027//\u0027, u\u0027jQuery.extend\u0027, u\u0027(\u0027, u\u0027infiniteScroll.settings.scripts\u0027, u\u0027,\u0027, u\u0027[\u0027, u\u0027``\u0027, u\u0027jquery-core\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027jquery\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027mobile-useragent-info\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027postmessage\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027jquery_inview\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027jetpack_resize\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027acm-globals\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027r-login\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027ltv-throttle-debounce\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027spin\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027jquery.spin\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027jetpack_likes_queuehandler\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027the-neverending-homepage\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027underscore\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027backbone\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027twitter-widgets\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027twitter-widgets-infinity\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027twitter-widgets-pending\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027ltv-bootstrap-modal\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027ltv-bootstrap-collapse\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027ltv-bootstrap-tooltip\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027ltv-bootstrap-tab\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027ltv-dropdownhover\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027ltv-flexmenu\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027ltv-leanslider\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027ltv-jquery-validate\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027ltv-fancybox\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027ltv-fancybox-thumbs\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027ltv-waypoints\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027ltv-localtv\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027ltv-helpers\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027ltv-functions\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027wpcom-vip-analytics\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027wpcom-masterbar-js\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027wpcom-masterbar-tracks-js\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027swfobject\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027videopress\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027tiled-gallery\u0027, u\"\u0027\u0027\", u\u0027]\u0027, u\u0027)\u0027, u\u0027;\u0027, u\u0027jQuery.extend\u0027, u\u0027(\u0027, u\u0027infiniteScroll.settings.styles\u0027, u\u0027,\u0027, u\u0027[\u0027, u\u0027``\u0027, u\u0027wpcom-text-widget-styles\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027mp6hacks\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027ltv-bootstrap\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027ltv-responsive\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027ltv-icons-weather-icons\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027ltv-station\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027jetpack-widget-social-icons-styles\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027reblogging\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027h4-global\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\"\u0027\u0027\", u\u0027tiled-gallery\u0027, u\"\u0027\u0027\", u\u0027]\u0027, u\u0027)\u0027, u\u0027;\u0027, u\u0027var\u0027, u\u0027_nolParams\u0027, u\u0027\u003d\u0027, u\u0027{\u0027, u\u0027nol_sfcode\u0027, u\u0027:\u0027, u\"\u0027dcr\", u\"\u0027\", u\u0027,\u0027, u\u0027nol_ci\u0027, u\u0027:\u0027, u\"\u0027us-400338\", u\"\u0027\", u\u0027,\u0027, u\u0027nol_apid\u0027, u\u0027:\u0027, u\u0027``\u0027, u\u0027P05785DE5-A1A4-4660-8F34-1AAC0DDD4779\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\u0027nol_assetname\u0027, u\u0027:\u0027, u\u0027``\u0027, u\"\u0027\u0027\", u\u0027,\u0027, u\u0027nol_apn\u0027, u\u0027:\u0027, u\"\u0027nielsenDCR\", u\"\u0027\", u\u0027,\u0027, u\u0027nol_vc\u0027, u\u0027:\u0027, u\u0027``\u0027, u\u0027c17\u0027, u\"\u0027\u0027\", u\u0027}\u0027, u\u0027;\u0027, u\u0027(\u0027, u\u0027function\u0027, u\u0027(\u0027, u\u0027params\u0027, u\u0027)\u0027, u\u0027{\u0027, u\u0027var\u0027, u\u0027url\u0027, u\u0027\u003d\u0027, u\"\u0027https\", u\u0027:\u0027, u\u0027//cdn-gl.imrworldwide.com/novms/js/2/nlsDcrLite510.min.js\u0027, u\u0027#\u0027, u\"\u0027\", u\u0027;\u0027, u\u0027var\u0027, u\u0027query\u0027, u\u0027\u003d\u0027, u\u0027[\u0027, u\u0027]\u0027, u\u0027;\u0027, u\u0027for\u0027, u\u0027(\u0027, u\u0027var\u0027, u\u0027param\u0027, u\u0027in\u0027, u\u0027params\u0027, u\u0027)\u0027, u\u0027{\u0027, u\u0027query.push\u0027, u\u0027(\u0027, u\u0027param\u0027, u\u0027+\u0027, u\"\u0027\u003d\", u\"\u0027\", u\u0027+\u0027, u\u0027params\u0027, u\u0027[\u0027, u\u0027param\u0027, u\u0027]\u0027, u\u0027)\u0027, u\u0027;\u0027, u\u0027}\u0027, u\u0027//\u0027, u\u0027for\u0027, u\u0027url\u0027, u\u0027+\u003d\u0027, u\u0027query.join\u0027, u\u0027(\u0027, u\"\u0027\", u\u0027\u0026\u0027, u\"\u0027\", u\u0027)\u0027, u\u0027;\u0027, u\u0027var\u0027, u\u0027script\u0027, u\u0027\u003d\u0027, u\u0027window.document.createElement\u0027, u\u0027(\u0027, u\u0027``\u0027, u\u0027script\u0027, u\"\u0027\u0027\", u\u0027)\u0027, u\u0027;\u0027, u\u0027script.async\u0027, u\u0027\u003d\u0027, u\u0027true\u0027, u\u0027;\u0027, u\u0027script.src\u0027, u\u0027\u003d\u0027, u\u0027url\u0027, u\u0027;\u0027, u\u0027window.document.getElementsByTagName\u0027, u\u0027(\u0027, u\"\u0027head\", u\"\u0027\", u\u0027)\u0027, u\u0027[\u0027, u\u00270\u0027, u\u0027]\u0027, u\u0027.appendChild\u0027, u\u0027(\u0027, u\u0027script\u0027, u\u0027)\u0027, u\u0027;\u0027, u\u0027}\u0027, u\u0027)\u0027, u\u0027(\u0027, u\u0027_nolParams\u0027, u\u0027)\u0027, u\u0027;\u0027, u\u0027_tkq\u0027, u\u0027\u003d\u0027, u\u0027window._tkq\u0027, u\u0027||\u0027, u\u0027[\u0027, u\u0027]\u0027, u\u0027;\u0027, u\u0027_stq\u0027, u\u0027\u003d\u0027, u\u0027window._stq\u0027, u\u0027||\u0027, u\u0027[\u0027, u\u0027]\u0027, u\u0027;\u0027, u\u0027_tkq.push\u0027, u\u0027(\u0027, u\u0027[\u0027, u\"\u0027storeContext\", u\"\u0027\", u\u0027,\u0027, u\u0027{\u0027, u\"\u0027blog_id\", u\"\u0027\", u\u0027:\u0027, u\"\u002741641936\", u\"\u0027\", u\u0027,\u0027, u\"\u0027blog_tz\", u\"\u0027\", u\u0027:\u0027, u\"\u0027-7\", u\"\u0027\", u\u0027,\u0027, u\"\u0027user_lang\", u\"\u0027\", u\u0027:\u0027, u\"\u0027en\", u\"\u0027\", u\u0027,\u0027, u\"\u0027blog_lang\", u\"\u0027\", u\u0027:\u0027, u\"\u0027en\", u\"\u0027\", u\u0027,\u0027, u\"\u0027user_id\", u\"\u0027\", u\u0027:\u0027, u\"\u00270\", u\"\u0027\", u\u0027}\u0027, u\u0027]\u0027, u\u0027)\u0027, u\u0027;\u0027, u\u0027_stq.push\u0027, u\u0027(\u0027, u\u0027[\u0027, u\"\u0027view\", u\"\u0027\", u\u0027,\u0027, u\u0027{\u0027, u\"\u0027blog\", u\"\u0027\", u\u0027:\u0027, u\"\u002741641936\", u\"\u0027\", u\u0027,\u0027, u\"\u0027v\", u\"\u0027\", u\u0027:\u0027, u\"\u0027wpcom\", u\"\u0027\", u\u0027,\u0027, u\"\u0027tz\", u\"\u0027\", u\u0027:\u0027, u\"\u0027-7\", u\"\u0027\", u\u0027,\u0027, u\"\u0027user_id\", u\"\u0027\", u\u0027:\u0027, u\"\u00270\", u\"\u0027\", u\u0027,\u0027, u\"\u0027subd\", u\"\u0027\", u\u0027:\u0027, u\"\u0027tribktla\", u\"\u0027\", u\u0027}\u0027, u\u0027]\u0027, u\u0027)\u0027, u\u0027;\u0027, u\u0027function\u0027, u\u0027st_vt\u0027, u\u0027(\u0027, u\u0027)\u0027, u\u0027{\u0027, u\u0027var\u0027, u\u0027x\u003ddocument.createElement\u0027, u\u0027(\u0027, u\u0027``\u0027, u\u0027img\u0027, u\"\u0027\u0027\", u\u0027)\u0027, u\u0027;\u0027, u\u0027x.src\u003d\u0027, u\"\u0027\u0027\", u\u0027https\u0027, u\u0027:\u0027, u\u0027//pixel.wp.com/g.gif\u0027, u\u0027?\u0027, u\u0027blog\u003d41641936\u0027, u\u0027\u0026\u0027, u\u0027v\u003dwpcomvt\u0027, u\u0027\u0026\u0027, u\u0027tz\u003d-7\u0027, u\u0027\u0026\u0027, u\u0027user_id\u003d0\u0027, u\u0027\u0026\u0027, u\u0027subd\u003dtribktla\u0027, u\u0027\u0026\u0027, u\u0027rand\u003d\u0027, u\"\u0027\u0027\", u\u0027+Math.random\u0027, u\u0027(\u0027, u\u0027)\u0027, u\u0027;\u0027, u\u0027}\u0027, u\u0027_stq.push\u0027, u\u0027(\u0027, u\u0027[\u0027, u\"\u0027extra\", u\"\u0027\", u\u0027,\u0027, u\u0027{\u0027, u\"\u0027crypt\", u\"\u0027\", u\u0027:\u0027, u\"\u0027UE40eW5QN0p8M2Y/RE1BNmNJfGhxNCVxUDExYmtib2E/SzdEJm0lUEtbdFU0fFk4cHZvcUFrZT90Tn4yQm1+R3NyNTdDSXAzMF1ST18/MkNCMnFKfkZOeTNscD18Nj1ULUFxTHBCNVdmTU0tcmZUVFgvbGwxaW5Pblgrekt5JTBbUmc4fEY3R08zUGZsLFtZeVJJQ19CQ0dBTjVTL0UmLlhtbVRaW0ZvM3JLUi1CMEdEJUlIUzFWSC4tMnhrQlljQTNZaj9IRFtqc0s4U0V8dn5lOUksVUl+LXRC\", u\"\u0027\", u\u0027}\u0027, u\u0027]\u0027, u\u0027)\u0027, u\u0027;\u0027, u\u0027_stq.push\u0027, u\u0027(\u0027, u\u0027[\u0027, u\"\u0027clickTrackerInit\", u\"\u0027\", u\u0027,\u0027, u\"\u002741641936\", u\"\u0027\", u\u0027,\u0027, u\"\u00270\", u\"\u0027\", u\u0027]\u0027, u\u0027)\u0027, u\u0027;\u0027, u\u0027if\u0027, u\u0027(\u0027, u\"\u0027object\", u\"\u0027\", u\u0027\u003d\u003d\u003d\u0027, u\u0027typeof\u0027, u\u0027wpcom_mobile_user_agent_info\u0027, u\u0027)\u0027, u\u0027{\u0027, u\u0027wpcom_mobile_user_agent_info.init\u0027, u\u0027(\u0027, u\u0027)\u0027, u\u0027;\u0027, u\u0027var\u0027, u\u0027mobileStatsQueryString\u0027, u\u0027\u003d\u0027, u\u0027``\u0027, u\"\u0027\u0027\", u\u0027;\u0027, u\u0027if\u0027, u\u0027(\u0027, u\u0027false\u0027, u\u0027!\u0027, u\u0027\u003d\u003d\u0027, u\u0027wpcom_mobile_user_agent_info.matchedPlatformName\u0027, u\u0027)\u0027, u\u0027mobileStatsQueryString\u0027, u\u0027+\u003d\u0027, u\u0027``\u0027, u\u0027\u0026\u0027, u\u0027x_\u0027, u\"\u0027\u0027\", u\u0027+\u0027, u\"\u0027mobile_platforms\", u\"\u0027\", u\u0027+\u0027, u\"\u0027\u003d\", u\"\u0027\", u\u0027+\u0027, u\u0027wpcom_mobile_user_agent_info.matchedPlatformName\u0027, u\u0027;\u0027, u\u0027if\u0027, u\u0027(\u0027, u\u0027false\u0027, u\u0027!\u0027, u\u0027\u003d\u003d\u0027, u\u0027wpcom_mobile_user_agent_info.matchedUserAgentName\u0027, u\u0027)\u0027, u\u0027mobileStatsQueryString\u0027, u\u0027+\u003d\u0027, u\u0027``\u0027, u\u0027\u0026\u0027, u\u0027x_\u0027, u\"\u0027\u0027\", u\u0027+\u0027, u\"\u0027mobile_devices\", u\"\u0027\", u\u0027+\u0027, u\"\u0027\u003d\", u\"\u0027\", u\u0027+\u0027, u\u0027wpcom_mobile_user_agent_info.matchedUserAgentName\u0027, u\u0027;\u0027, u\u0027if\u0027, u\u0027(\u0027, u\u0027wpcom_mobile_user_agent_info.isIPad\u0027, u\u0027(\u0027, u\u0027)\u0027, u\u0027)\u0027, u\u0027mobileStatsQueryString\u0027, u\u0027+\u003d\u0027, u\u0027``\u0027, u\u0027\u0026\u0027, u\u0027x_\u0027, u\"\u0027\u0027\", u\u0027+\u0027, u\"\u0027ipad_views\", u\"\u0027\", u\u0027+\u0027, u\"\u0027\u003d\", u\"\u0027\", u\u0027+\u0027, u\"\u0027views\", u\"\u0027\", u\u0027;\u0027, u\u0027if\u0027, u\u0027(\u0027, u\u0027``\u0027, u\"\u0027\u0027\", u\u0027!\u0027, u\u0027\u003d\u0027, u\u0027mobileStatsQueryString\u0027, u\u0027)\u0027, u\u0027{\u0027, u\u0027new\u0027, u\u0027Image\u0027, u\u0027(\u0027, u\u0027)\u0027, u\u0027.src\u0027, u\u0027\u003d\u0027, u\u0027document.location.protocol\u0027, u\u0027+\u0027, u\"\u0027//pixel.wp.com/g.gif\", u\u0027?\u0027, u\u0027v\u003dwpcom-no-pv\u0027, u\"\u0027\", u\u0027+\u0027, u\u0027mobileStatsQueryString\u0027, u\u0027+\u0027, u\"\u0027\", u\u0027\u0026\u0027, u\u0027baba\u003d\u0027, u\"\u0027\", u\u0027+\u0027, u\u0027Math.random\u0027, u\u0027(\u0027, u\u0027)\u0027, u\u0027;\u0027, u\u0027}\u0027, u\u0027}\u0027]\n"
+          }
+        ]
+      },
+      "runtimeInfos": {},
+      "apps": [],
+      "jobName": "paragraph_1536074139379_1428534229",
+      "id": "20180904-151539_887371353",
+      "dateCreated": "2018-09-04 15:15:39.379",
+      "dateStarted": "2018-09-08 19:21:55.825",
+      "dateFinished": "2018-09-08 19:21:56.668",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n\nfirst_text \u003d nltk.Text(all_strings.first())\nfdist1 \u003d nltk.probability.FreqDist(first_text)\nfdist1.most_common(50)\n\ndef removeBracket(x):\n    newList \u003d []\n    bracketcount \u003d 0\n    for word in x:\n        if word !\u003d \u0027(\u0027 and bracketcount \u003d\u003d 0:\n            newList.append(word)\n        elif word \u003d\u003d \u0027(\u0027:\n            bracketcount \u003d bracketcount + 1\n        elif word \u003d\u003d \u0027)\u0027:\n            bracketcount \u003d bracketcount - 1\n    return newList\n        \n\ndef removeCurlBracket(x):\n    newList \u003d []\n    bracketcount \u003d 0\n    for word in x:\n        if word !\u003d \u0027{\u0027 and bracketcount \u003d\u003d 0:\n            newList.append(word)\n        elif word \u003d\u003d \u0027{\u0027:\n            bracketcount \u003d bracketcount + 1\n        elif word \u003d\u003d \u0027}\u0027:\n            bracketcount \u003d bracketcount - 1\n    return newList\n        \ndef cleanTokens(x):\n    return [s for s in x if s.isalpha()]\n    \ncleaned_text \u003d all_strings.map(removeBracket)\ncleaned_text2 \u003d cleaned_text.map(removeCurlBracket)\ncleaned_text3 \u003d cleaned_text2.map(cleanTokens)\ncleaned_text3.take(1)\n\n#def mostCommon50(x):\n#    abcText \u003d nltk.Text(x)\n#    abcfdist \u003d nltk.probability.FreqDist(abcText)\n#    return abcfdist.most_common(50)\n\n#mostcommon50 \u003d cleaned_text.map(mostCommon50)\n#mostcommon50.take(1)",
+      "user": "anonymous",
+      "dateUpdated": "2018-09-08 19:36:51.905",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "[[u\u0027GoSearch\u0027, u\u0027Replay\u0027, u\u0027KTLA\u0027, u\u0027Morning\u0027, u\u0027News\u0027, u\u0027KTLA\u0027, u\u0027TV\u0027, u\u0027Schedule\u0027, u\u0027Watch\u0027, u\u0027CW\u0027, u\u0027Shows\u0027, u\u0027Search\u0027, u\u0027Contact\u0027, u\u0027Us\u0027, u\u0027KTLA\u0027, u\u0027Menu\u0027, u\u0027News\u0027, u\u0027Morning\u0027, u\u0027News\u0027, u\u0027Video\u0027, u\u0027Podcasts\u0027, u\u0027Contests\u0027, u\u0027Traffic\u0027, u\u0027Events\u0027, u\u0027About\u0027, u\u0027Weather\u0027, u\u0027Low\u0027, u\u0027High\u0027, u\u0027Sun\u0027, u\u0027Mon\u0027, u\u0027Tue\u0027, u\u0027See\u0027, u\u0027complete\u0027, u\u0027forecast\u0027, u\u0027Severe\u0027, u\u0027weather\u0027, u\u0027alert\u0027, u\u0027national\u0027, u\u0027hurricane\u0027, u\u0027center\u0027, u\u0027Hurricane\u0027, u\u0027Nate\u0027, u\u0027Makes\u0027, u\u0027Landfall\u0027, u\u0027in\u0027, u\u0027Mississippi\u0027, u\u0027After\u0027, u\u0027Hitting\u0027, u\u0027Louisiana\u0027, u\u0027Hurricane\u0027, u\u0027Maria\u0027, u\u0027Strengthens\u0027, u\u0027to\u0027, u\u0027Category\u0027, u\u0027as\u0027, u\u0027Storm\u0027, u\u0027Nears\u0027, u\u0027Puerto\u0027, u\u0027Rico\u0027, u\u0027Hurricane\u0027, u\u0027Jose\u0027, u\u0027s\u0027, u\u0027Twisting\u0027, u\u0027Path\u0027, u\u0027May\u0027, u\u0027Bring\u0027, u\u0027it\u0027, u\u0027Back\u0027, u\u0027Toward\u0027, u\u0027the\u0027, u\u0027Bahamas\u0027, u\u0027and\u0027, u\u0027Floridians\u0027, u\u0027Prepare\u0027, u\u0027Their\u0027, u\u0027Homes\u0027, u\u0027Jam\u0027, u\u0027Highways\u0027, u\u0027to\u0027, u\u0027Flee\u0027, u\u0027Wrath\u0027, u\u0027of\u0027, u\u0027Hurricane\u0027, u\u0027Irma\u0027, u\u0027Puerto\u0027, u\u0027Rico\u0027, u\u0027Nervously\u0027, u\u0027Awaits\u0027, u\u0027Category\u0027, u\u0027Hurricane\u0027, u\u0027Irma\u0027, u\u0027Which\u0027, u\u0027Is\u0027, u\u0027Already\u0027, u\u0027Blamed\u0027, u\u0027for\u0027, u\u0027at\u0027, u\u0027Least\u0027, u\u0027Deaths\u0027, u\u0027Potentially\u0027, u\u0027Catastrophic\u0027, u\u0027Hurricane\u0027, u\u0027Irma\u0027, u\u0027Nears\u0027, u\u0027Leeward\u0027, u\u0027Islands\u0027, u\u0027After\u0027, u\u0027Strengthening\u0027, u\u0027to\u0027, u\u0027Category\u0027, u\u0027Storm\u0027, u\u0027Powerful\u0027, u\u0027Hurricane\u0027, u\u0027Irma\u0027, u\u0027Developing\u0027, u\u0027Over\u0027, u\u0027Atlantic\u0027, u\u0027Could\u0027, u\u0027Be\u0027, u\u0027Next\u0027, u\u0027Weather\u0027, u\u0027Disaster\u0027, u\u0027Dead\u0027, u\u0027in\u0027, u\u0027Hurricane\u0027, u\u0027Harvey\u0027, u\u0027Whole\u0027, u\u0027City\u0027, u\u0027Underwater\u0027, u\u0027After\u0027, u\u0027Landfall\u0027, u\u0027at\u0027, u\u0027Louisiana\u0027, u\u0027Border\u0027, u\u0027Dead\u0027, u\u0027in\u0027, u\u0027Florida\u0027, u\u0027as\u0027, u\u0027Hurricane\u0027, u\u0027Matthew\u0027, u\u0027Downgraded\u0027, u\u0027to\u0027, u\u0027Category\u0027, u\u0027Storm\u0027, u\u0027Approaches\u0027, u\u0027Georgia\u0027, u\u0027and\u0027, u\u0027the\u0027, u\u0027Carolinas\u0027, u\u0027Mobile\u0027, u\u0027Apps\u0027, u\u0027Android\u0027, u\u0027App\u0027, u\u0027iPhone\u0027, u\u0027iPad\u0027, u\u0027App\u0027, u\u0027KTLA\u0027, u\u0027News\u0027, u\u0027on\u0027, u\u0027Social\u0027, u\u0027Media\u0027, u\u0027Watch\u0027, u\u0027CW\u0027, u\u0027Shows\u0027, u\u0027Facebook\u0027, u\u0027Twitter\u0027, u\u0027Instagram\u0027, u\u0027Email\u0027, u\u0027Alerts\u0027, u\u0027About\u0027, u\u0027Contact\u0027, u\u0027Covers\u0027, u\u0027Online\u0027, u\u0027Public\u0027, u\u0027File\u0027, u\u0027Terms\u0027, u\u0027of\u0027, u\u0027Service\u0027, u\u0027Privacy\u0027, u\u0027Policy\u0027, u\u0027Sunset\u0027, u\u0027Blvd\u0027, u\u0027Los\u0027, u\u0027Angeles\u0027, u\u0027CA\u0027, u\u0027Copyright\u0027, u\u0027KTLA\u0027, u\u0027A\u0027, u\u0027Tribune\u0027, u\u0027Broadcasting\u0027, u\u0027Station\u0027, u\u0027Powered\u0027, u\u0027by\u0027, u\u0027VIP\u0027, u\u0027Email\u0027, u\u0027Alerts\u0027, u\u0027var\u0027, u\u0027infiniteScroll\u0027, u\u0027var\u0027, u\u0027sharedGa\u0027, u\u0027sharedGa\u0027, u\u0027var\u0027, u\u0027true\u0027, u\u0027if\u0027, u\u0027Read\u0027, u\u0027more\u0027, u\u0027var\u0027, u\u0027cb\u0027, u\u0027function\u0027, u\u0027var\u0027, u\u0027adRefInterval\u0027, u\u0027setInterval\u0027, u\u0027var\u0027, u\u0027TrbTv\u0027, u\u0027var\u0027, u\u0027wpcomVipAnalytics\u0027, u\u0027var\u0027, u\u0027function\u0027, u\u0027if\u0027]]\n"
+          }
+        ]
+      },
+      "runtimeInfos": {},
+      "apps": [],
+      "jobName": "paragraph_1536076403813_-1289004093",
+      "id": "20180904-155323_92282636",
+      "dateCreated": "2018-09-04 15:53:23.813",
+      "dateStarted": "2018-09-08 19:36:51.947",
+      "dateFinished": "2018-09-08 19:36:52.601",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nfrom nltk.corpus import stopwords\n\nnltk.download(\u0027stopwords\u0027)\nstopwords \u003d stopwords.words(\u0027english\u0027)\n\ncustomStopwords \u003d [\u0027news\u0027, \u0027mobile\u0027, \u0027app\u0027, \u0027search\u0027, \u0027iphone\u0027, \u0027apps\u0027, \u0027email\u0027, \u0027var\u0027, \u0027function\u0027, \u0027true\u0027, \u0027false\u0027, \u0027terms\u0027, \u0027service\u0027, \u0027privacy\u0027, \u0027policy\u0027, \u0027contact\u0027, \u0027copyright\u0027]\n\ndef removestopwords(wordlist):\n    return [w for w in wordlist if w.lower() not in stopwords and w.lower() not in customStopwords]\n\n\ncleaned_text4 \u003d cleaned_text3.map(removenstopwords)\n\n\n#from nltk.corpus import wordnet\n\n\n#from nltk.corpus import words\n\n#nltk.download(\u0027wordnet\u0027)\n\ndef removenonenglish(wordlist):\n    return [w for w in wordlist if w in words.words()]\n\n\n#for i in range(0,15):\n#    wntest \u003d [w for w in cleaned_text4.take(15)[i] if wordnet.synsets(w.lower())]\n#    wntest\n\n\n#cleaned_text5 \u003d cleaned_text4.map(removenonenglish)\n#cleaned_text5.take(1)\n\n#wntest\n#cleaned_text4.take(1)[0]",
+      "user": "anonymous",
+      "dateUpdated": "2018-09-12 22:20:03.801",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "ERROR",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "[nltk_data] Downloading package stopwords to /root/nltk_data...\n[nltk_data]   Package stopwords is already up-to-date!\n"
+          },
+          {
+            "type": "TEXT",
+            "data": "Fail to execute line 20: cleaned_text4.show()\nTraceback (most recent call last):\n  File \"/tmp/zeppelin_pyspark-1221597344237358622.py\", line 380, in \u003cmodule\u003e\n    exec(code, _zcUserQueryNameSpace)\n  File \"\u003cstdin\u003e\", line 20, in \u003cmodule\u003e\nAttributeError: \u0027PipelinedRDD\u0027 object has no attribute \u0027show\u0027\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1536245268494_468217110",
+      "id": "20180906-144748_1223704607",
+      "dateCreated": "2018-09-06 14:47:48.497",
+      "dateStarted": "2018-09-08 19:41:13.023",
+      "dateFinished": "2018-09-08 19:41:13.036",
+      "status": "ERROR",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ncleaned_text2.count()",
+      "user": "anonymous",
+      "dateUpdated": "2018-09-08 19:51:25.592",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "ERROR",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "org.apache.thrift.transport.TTransportException\n\tat org.apache.thrift.transport.TIOStreamTransport.read(TIOStreamTransport.java:132)\n\tat org.apache.thrift.transport.TTransport.readAll(TTransport.java:86)\n\tat org.apache.thrift.protocol.TBinaryProtocol.readAll(TBinaryProtocol.java:429)\n\tat org.apache.thrift.protocol.TBinaryProtocol.readI32(TBinaryProtocol.java:318)\n\tat org.apache.thrift.protocol.TBinaryProtocol.readMessageBegin(TBinaryProtocol.java:219)\n\tat org.apache.thrift.TServiceClient.receiveBase(TServiceClient.java:69)\n\tat org.apache.zeppelin.interpreter.thrift.RemoteInterpreterService$Client.recv_interpret(RemoteInterpreterService.java:274)\n\tat org.apache.zeppelin.interpreter.thrift.RemoteInterpreterService$Client.interpret(RemoteInterpreterService.java:258)\n\tat org.apache.zeppelin.interpreter.remote.RemoteInterpreter$4.call(RemoteInterpreter.java:233)\n\tat org.apache.zeppelin.interpreter.remote.RemoteInterpreter$4.call(RemoteInterpreter.java:229)\n\tat org.apache.zeppelin.interpreter.remote.RemoteInterpreterProcess.callRemoteFunction(RemoteInterpreterProcess.java:135)\n\tat org.apache.zeppelin.interpreter.remote.RemoteInterpreter.interpret(RemoteInterpreter.java:228)\n\tat org.apache.zeppelin.notebook.Paragraph.jobRun(Paragraph.java:437)\n\tat org.apache.zeppelin.scheduler.Job.run(Job.java:188)\n\tat org.apache.zeppelin.scheduler.RemoteScheduler$JobRunner.run(RemoteScheduler.java:307)\n\tat java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)\n\tat java.util.concurrent.FutureTask.run(FutureTask.java:266)\n\tat java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)\n\tat java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\n\tat java.lang.Thread.run(Thread.java:748)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1536426931008_-375492546",
+      "id": "20180908-171531_584271147",
+      "dateCreated": "2018-09-08 17:15:31.020",
+      "dateStarted": "2018-09-08 19:51:25.627",
+      "dateFinished": "2018-09-08 19:52:32.127",
+      "status": "ABORT",
+      "errorMessage": "org.apache.thrift.transport.TTransportException\n\tat org.apache.thrift.transport.TIOStreamTransport.read(TIOStreamTransport.java:132)\n\tat org.apache.thrift.transport.TTransport.readAll(TTransport.java:86)\n\tat org.apache.thrift.protocol.TBinaryProtocol.readAll(TBinaryProtocol.java:429)\n\tat org.apache.thrift.protocol.TBinaryProtocol.readI32(TBinaryProtocol.java:318)\n\tat org.apache.thrift.protocol.TBinaryProtocol.readMessageBegin(TBinaryProtocol.java:219)\n\tat org.apache.thrift.TServiceClient.receiveBase(TServiceClient.java:69)\n\tat org.apache.zeppelin.interpreter.thrift.RemoteInterpreterService$Client.recv_interpret(RemoteInterpreterService.java:274)\n\tat org.apache.zeppelin.interpreter.thrift.RemoteInterpreterService$Client.interpret(RemoteInterpreterService.java:258)\n\tat org.apache.zeppelin.interpreter.remote.RemoteInterpreter$4.call(RemoteInterpreter.java:233)\n\tat org.apache.zeppelin.interpreter.remote.RemoteInterpreter$4.call(RemoteInterpreter.java:229)\n\tat org.apache.zeppelin.interpreter.remote.RemoteInterpreterProcess.callRemoteFunction(RemoteInterpreterProcess.java:135)\n\tat org.apache.zeppelin.interpreter.remote.RemoteInterpreter.interpret(RemoteInterpreter.java:228)\n\tat org.apache.zeppelin.notebook.Paragraph.jobRun(Paragraph.java:437)\n\tat org.apache.zeppelin.scheduler.Job.run(Job.java:188)\n\tat org.apache.zeppelin.scheduler.RemoteScheduler$JobRunner.run(RemoteScheduler.java:307)\n\tat java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)\n\tat java.util.concurrent.FutureTask.run(FutureTask.java:266)\n\tat java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)\n\tat java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\n\tat java.lang.Thread.run(Thread.java:748)\n",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n",
+      "user": "anonymous",
+      "dateUpdated": "2018-09-08 19:44:59.328",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1536435899327_884667066",
+      "id": "20180908-194459_1285807409",
+      "dateCreated": "2018-09-08 19:44:59.327",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "UseJsonWithPyspark",
+  "id": "2DQ1GJHK9",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "python:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}
