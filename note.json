@@ -1,0 +1,311 @@
+{
+  "paragraphs": [
+    {
+      "text": "%pyspark\nimport nltk\nimport re\nfrom nltk.corpus import stopwords\nnltk.download(\u0027stopwords\u0027)\nstop_words \u003d stopwords.words(\u0027english\u0027)",
+      "user": "anonymous",
+      "dateUpdated": "2018-09-18 13:46:33.331",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "[nltk_data] Downloading package stopwords to /root/nltk_data...\n[nltk_data]   Unzipping corpora/stopwords.zip.\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1537278362880_388464219",
+      "id": "20180918-134602_980448613",
+      "dateCreated": "2018-09-18 13:46:02.880",
+      "dateStarted": "2018-09-18 13:46:33.391",
+      "dateFinished": "2018-09-18 13:46:51.020",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\npath \u003d \"/share_dir/small_data_output/*.json\"\nhtmlDF \u003d spark.read.json(path)",
+      "user": "anonymous",
+      "dateUpdated": "2018-09-18 13:47:11.411",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.17.0.2:4040/jobs/job?id\u003d1"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1537278393339_-714182988",
+      "id": "20180918-134633_1519418626",
+      "dateCreated": "2018-09-18 13:46:33.339",
+      "dateStarted": "2018-09-18 13:47:11.467",
+      "dateFinished": "2018-09-18 13:47:11.915",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nhtmlDF.printSchema()  # show data schema\nhtmlDF.show()",
+      "user": "anonymous",
+      "dateUpdated": "2018-09-18 13:47:24.193",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- originalUrl: string (nullable \u003d true)\n |-- text: string (nullable \u003d true)\n |-- timestamp: string (nullable \u003d true)\n |-- title: string (nullable \u003d true)\n\n+--------------------+--------------------+--------------+--------------------+\n|         originalUrl|                text|     timestamp|               title|\n+--------------------+--------------------+--------------+--------------------+\n|http://www.huffin...|     403 - Forbidden|20180819001642|     403 - Forbidden|\n|https://www.washi...|Sections Home Dem...|20180819001931|Irma intensifies ...|\n|https://globalnew...|/* */ if ( \u0027funct...|20180819002308|‘Get out now’: FE...|\n|http://www.foxnew...|Fox News U.S. Wor...|20180819001431|Extremely dangero...|\n|https://globalnew...|/* */ if ( \u0027funct...|20180819002152|Hurricane Irma: W...|\n|http://www.orland...|Be prepared with ...|20180819002115|Hurricane Florida...|\n|https://globalnew...|{{data.title}} Sp...|20180819002238|Hurricane Watch |...|\n|http://sanfrancis...|KPIX 5 Live Menu ...|20180819001423|Mandatory Evacuat...|\n|https://www.cbsne...|@font-face{font-f...|20180819002110|Hurricane Matthew...|\n|https://www.cbsne...|@font-face{font-f...|20180819002018|Florida - Hurrica...|\n|https://globalnew...|{{data.title}} Sp...|20180819002153|Florida Hurricane...|\n|http://www.cbsnew...|@font-face{font-f...|20180819001425|Hurricane Maria p...|\n|https://ktla.com/...|GoSearch Replay: ...|20180819002120|Hurricane Jose’s ...|\n|https://www.cbsne...|@font-face{font-f...|20180819001956|UN soldiers - Hur...|\n|http://www.nbcmia...|//must have for c...|20180819001844|Category 1 Hurric...|\n|https://www.washi...|Sections Home Dem...|20180819001911|Hurricane Jose st...|\n|http://wapo.st/2j...|1 Desktop notific...|20180819002115|Hurricane Irma te...|\n|https://globalnew...|{{data.title}} Sp...|20180819002154|Hurricane Irma st...|\n|http://www.nbcmia...|//must have for c...|20180819001653|Killer Hurricane ...|\n|https://www.usato...|SUBSCRIBE NOWto g...|20180819002137|Hurricane Irma ra...|\n+--------------------+--------------------+--------------+--------------------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.17.0.2:4040/jobs/job?id\u003d2"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1537278412897_710143120",
+      "id": "20180918-134652_1417509594",
+      "dateCreated": "2018-09-18 13:46:52.897",
+      "dateStarted": "2018-09-18 13:47:24.225",
+      "dateFinished": "2018-09-18 13:47:24.568",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n# find number of records in the document\ntext \u003d htmlDF.select(\"text\")\ntext.count()",
+      "user": "anonymous",
+      "dateUpdated": "2018-09-18 13:47:44.866",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "442\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.17.0.2:4040/jobs/job?id\u003d3"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1537278422662_70533666",
+      "id": "20180918-134702_1087493329",
+      "dateCreated": "2018-09-18 13:47:02.662",
+      "dateStarted": "2018-09-18 13:47:44.895",
+      "dateFinished": "2018-09-18 13:47:45.651",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n# cleaning data\n\ndata \u003d htmlDF.select(\u0027text\u0027).rdd\n\n# remove null element from data (MapPartitionsRDD)\ndata_remove_null \u003d data.filter(lambda e: len(e) \u003e 0)\n#.collect()\n\n#tokenize words and filter out stop_words and not alpha\nword_filter \u003d data_remove_null.map(lambda line: re.split(\u0027 \u0027, line[0])).map(lambda txt: [w.lower() for w in txt if w.lower().isalpha()]).map(lambda txt: [w for w in txt if w not in stop_words]).map(lambda txt: [w for w in txt if len(w) \u003e 2 and len(w) \u003c 17])\n#sc.parallelize(data_remove_null).map(lambda line: re.split(\u0027 \u0027, line[0]))\n#.filter(lambda word: word.lower().isalpha())\n#.filter(lambda word: word.lower() not in stop_words).filter(lambda word: len(word) \u003e 2).filter(lambda word: len(word) \u003c 17)\n\n# word count\nword_count \u003d word_filter.flatMap(lambda x: x).map(lambda word: (word.lower(), 1)).reduceByKey(lambda v1, v2: v1 + v2).map(lambda x: (x[1], x[0])).sortByKey(ascending \u003d False)\nword_count.take(100)",
+      "user": "anonymous",
+      "dateUpdated": "2018-09-18 13:47:56.917",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "[(16914, u\u0027hurricane\u0027), (11100, u\u0027var\u0027), (6964, u\u0027irma\u0027), (6432, u\u0027matthew\u0027), (5096, u\u0027florida\u0027), (4406, u\u0027storm\u0027), (2993, u\u0027october\u0027), (2984, u\u0027aug\u0027), (2972, u\u0027news\u0027), (2914, u\u0027people\u0027), (2415, u\u0027north\u0027), (2252, u\u0027fullscreen\u0027), (2232, u\u0027said\u0027), (2209, u\u0027function\u0027), (1972, u\u0027national\u0027), (1893, u\u0027winds\u0027), (1889, u\u0027images\u0027), (1639, u\u0027category\u0027), (1631, u\u0027carolina\u0027), (1622, u\u0027home\u0027), (1601, u\u0027residents\u0027), (1583, u\u0027hit\u0027), (1561, u\u0027weather\u0027), (1503, u\u0027video\u0027), (1475, u\u0027south\u0027), (1424, u\u0027new\u0027), (1413, u\u0027could\u0027), (1370, u\u0027island\u0027), (1292, u\u0027power\u0027), (1282, u\u0027water\u0027), (1229, u\u0027puerto\u0027), (1178, u\u0027washington\u0027), (1178, u\u0027rain\u0027), (1149, u\u0027coast\u0027), (1147, u\u0027haiti\u0027), (1138, u\u0027islands\u0027), (1113, u\u0027one\u0027), (1091, u\u0027keys\u0027), (1090, u\u0027watch\u0027), (1053, u\u0027today\u0027), (1042, u\u0027flooded\u0027), (1038, u\u0027caribbean\u0027), (997, u\u0027still\u0027), (992, u\u0027hits\u0027), (955, u\u0027via\u0027), (941, u\u0027homes\u0027), (940, u\u0027september\u0027), (933, u\u0027damage\u0027), (919, u\u0027caused\u0027), (914, u\u0027back\u0027), (904, u\u0027miami\u0027), (901, u\u0027center\u0027), (900, u\u0027beach\u0027), (895, u\u0027million\u0027), (892, u\u0027along\u0027), (872, u\u0027east\u0027), (870, u\u0027expected\u0027), (868, u\u0027get\u0027), (848, u\u0027high\u0027), (847, u\u0027also\u0027), (846, u\u0027emergency\u0027), (840, u\u0027gnewswp\u0027), (830, u\u0027else\u0027), (823, u\u0027key\u0027), (813, u\u0027world\u0027), (801, u\u0027global\u0027), (799, u\u0027usa\u0027), (785, u\u0027flooding\u0027), (783, u\u0027without\u0027), (782, u\u0027landfall\u0027), (776, u\u0027share\u0027), (775, u\u0027email\u0027), (766, u\u0027heavy\u0027), (763, u\u0027like\u0027), (751, u\u0027street\u0027), (749, u\u0027first\u0027), (747, u\u0027state\u0027), (747, u\u0027many\u0027), (743, u\u0027house\u0027), (742, u\u0027officials\u0027), (741, u\u0027two\u0027), (737, u\u0027region\u0027), (734, u\u0027policy\u0027), (734, u\u0027trump\u0027), (732, u\u0027west\u0027), (726, u\u0027atlantic\u0027), (726, u\u0027hurricanes\u0027), (725, u\u0027near\u0027), (721, u\u0027return\u0027), (712, u\u0027typeof\u0027), (708, u\u0027use\u0027), (707, u\u0027made\u0027), (702, u\u0027rico\u0027), (692, u\u0027bahamas\u0027), (683, u\u0027local\u0027), (673, u\u0027network\u0027), (672, u\u0027attachment\u0027), (667, u\u0027toward\u0027), (666, u\u0027area\u0027), (659, u\u0027virgin\u0027)]\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.17.0.2:4040/jobs/job?id\u003d4",
+            "http://172.17.0.2:4040/jobs/job?id\u003d5",
+            "http://172.17.0.2:4040/jobs/job?id\u003d6"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1537278458507_-540149638",
+      "id": "20180918-134738_1060292478",
+      "dateCreated": "2018-09-18 13:47:38.507",
+      "dateStarted": "2018-09-18 13:47:57.000",
+      "dateFinished": "2018-09-18 13:48:00.745",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n#Lemmatizer\nimport nltk\nnltk.download(\u0027wordnet\u0027)\nfrom nltk.stem import WordNetLemmatizer\n",
+      "user": "anonymous",
+      "dateUpdated": "2018-09-18 13:48:09.758",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "[nltk_data] Downloading package wordnet to /root/nltk_data...\n[nltk_data]   Unzipping corpora/wordnet.zip.\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1537278476917_-708476899",
+      "id": "20180918-134756_598905283",
+      "dateCreated": "2018-09-18 13:47:56.917",
+      "dateStarted": "2018-09-18 13:48:09.798",
+      "dateFinished": "2018-09-18 13:48:12.097",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n",
+      "user": "anonymous",
+      "dateUpdated": "2018-09-18 13:48:09.761",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1537278489758_1617619117",
+      "id": "20180918-134809_2081580830",
+      "dateCreated": "2018-09-18 13:48:09.759",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Data Process - Word Count",
+  "id": "2DSHS1U3R",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}
