@@ -1,9 +1,121 @@
 {
   "paragraphs": [
     {
-      "text": "%pyspark\nimport nltk\nimport re\nfrom nltk.corpus import stopwords\nnltk.download(\u0027stopwords\u0027)\nstop_words \u003d stopwords.words(\u0027english\u0027)",
+      "text": "%python.conda\ninstall -c conda-forge spacy",
       "user": "anonymous",
-      "dateUpdated": "2018-09-18 13:46:33.331",
+      "dateUpdated": "2018-09-22 16:12:01.636",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "sh",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/sh"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "ERROR",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Not supported command: rm -c conda-forge spacy"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1537632190863_1983795818",
+      "id": "20180922-160310_1235867503",
+      "dateCreated": "2018-09-22 16:03:10.863",
+      "dateStarted": "2018-09-22 16:11:34.746",
+      "dateFinished": "2018-09-22 16:11:34.751",
+      "status": "ERROR",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sh\n#grab spaCy language\npython -m spacy download en",
+      "user": "anonymous",
+      "dateUpdated": "2018-09-22 16:13:36.650",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "sh",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/sh"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Collecting en_core_web_sm\u003d\u003d2.0.0 from https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.0.0/en_core_web_sm-2.0.0.tar.gz#egg\u003den_core_web_sm\u003d\u003d2.0.0\n  Downloading https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.0.0/en_core_web_sm-2.0.0.tar.gz (37.4MB)\nInstalling collected packages: en-core-web-sm\n  Running setup.py install for en-core-web-sm: started\n    Running setup.py install for en-core-web-sm: finished with status \u0027done\u0027\nSuccessfully installed en-core-web-sm-2.0.0\nYou are using pip version 9.0.1, however version 18.0 is available.\nYou should consider upgrading via the \u0027pip install --upgrade pip\u0027 command.\n\n\u001b[93m    Linking successful\u001b[0m\n    /opt/conda/lib/python2.7/site-packages/en_core_web_sm --\u003e\n    /opt/conda/lib/python2.7/site-packages/spacy/data/en\n\n    You can now load the model via spacy.load(\u0027en\u0027)\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1537632073404_-499356530",
+      "id": "20180922-160113_1643691165",
+      "dateCreated": "2018-09-22 16:01:13.404",
+      "dateStarted": "2018-09-22 16:13:36.691",
+      "dateFinished": "2018-09-22 16:13:47.291",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sh\n#Parts above here only need to be run once. Press run here to do the normal workload.",
+      "user": "anonymous",
+      "dateUpdated": "2018-09-22 16:32:31.259",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "sh",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/sh"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1537632860348_-1949979570",
+      "id": "20180922-161420_1601462549",
+      "dateCreated": "2018-09-22 16:14:20.348",
+      "dateStarted": "2018-09-22 16:32:31.296",
+      "dateFinished": "2018-09-22 16:32:31.323",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nimport spacy\nimport nltk\nimport re\nfrom nltk.corpus import stopwords\nnltk.download(\u0027stopwords\u0027)\nstop_words \u003d stopwords.words(\u0027english\u0027)",
+      "user": "anonymous",
+      "dateUpdated": "2018-09-22 16:32:31.389",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -26,7 +138,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "[nltk_data] Downloading package stopwords to /root/nltk_data...\n[nltk_data]   Unzipping corpora/stopwords.zip.\n"
+            "data": "[nltk_data] Downloading package stopwords to /root/nltk_data...\n[nltk_data]   Package stopwords is already up-to-date!\n"
           }
         ]
       },
@@ -34,27 +146,27 @@
       "jobName": "paragraph_1537278362880_388464219",
       "id": "20180918-134602_980448613",
       "dateCreated": "2018-09-18 13:46:02.880",
-      "dateStarted": "2018-09-18 13:46:33.391",
-      "dateFinished": "2018-09-18 13:46:51.020",
+      "dateStarted": "2018-09-22 16:32:31.434",
+      "dateFinished": "2018-09-22 16:32:31.453",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%pyspark\npath \u003d \"/share_dir/small_data_output/*.json\"\nhtmlDF \u003d spark.read.json(path)",
       "user": "anonymous",
-      "dateUpdated": "2018-09-18 13:47:11.411",
+      "dateUpdated": "2018-09-22 16:32:31.533",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
         "enabled": true,
         "results": {},
         "editorSetting": {
-          "language": "scala",
+          "language": "python",
           "editOnDblClick": false,
           "completionKey": "TAB",
           "completionSupport": true
         },
-        "editorMode": "ace/mode/scala"
+        "editorMode": "ace/mode/python"
       },
       "settings": {
         "params": {},
@@ -71,7 +183,7 @@
           "tooltip": "View in Spark web UI",
           "group": "spark",
           "values": [
-            "http://172.17.0.2:4040/jobs/job?id\u003d1"
+            "http://172.17.0.2:4040/jobs/job?id\u003d0"
           ],
           "interpreterSettingId": "spark"
         }
@@ -80,15 +192,15 @@
       "jobName": "paragraph_1537278393339_-714182988",
       "id": "20180918-134633_1519418626",
       "dateCreated": "2018-09-18 13:46:33.339",
-      "dateStarted": "2018-09-18 13:47:11.467",
-      "dateFinished": "2018-09-18 13:47:11.915",
+      "dateStarted": "2018-09-22 16:32:31.557",
+      "dateFinished": "2018-09-22 16:32:35.656",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%pyspark\nhtmlDF.printSchema()  # show data schema\nhtmlDF.show()",
       "user": "anonymous",
-      "dateUpdated": "2018-09-18 13:47:24.193",
+      "dateUpdated": "2018-09-22 16:32:35.662",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -122,7 +234,7 @@
           "tooltip": "View in Spark web UI",
           "group": "spark",
           "values": [
-            "http://172.17.0.2:4040/jobs/job?id\u003d2"
+            "http://172.17.0.2:4040/jobs/job?id\u003d1"
           ],
           "interpreterSettingId": "spark"
         }
@@ -131,15 +243,15 @@
       "jobName": "paragraph_1537278412897_710143120",
       "id": "20180918-134652_1417509594",
       "dateCreated": "2018-09-18 13:46:52.897",
-      "dateStarted": "2018-09-18 13:47:24.225",
-      "dateFinished": "2018-09-18 13:47:24.568",
+      "dateStarted": "2018-09-22 16:32:35.711",
+      "dateFinished": "2018-09-22 16:32:36.119",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%pyspark\n# find number of records in the document\ntext \u003d htmlDF.select(\"text\")\ntext.count()",
       "user": "anonymous",
-      "dateUpdated": "2018-09-18 13:47:44.866",
+      "dateUpdated": "2018-09-22 16:32:36.122",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -173,7 +285,7 @@
           "tooltip": "View in Spark web UI",
           "group": "spark",
           "values": [
-            "http://172.17.0.2:4040/jobs/job?id\u003d3"
+            "http://172.17.0.2:4040/jobs/job?id\u003d2"
           ],
           "interpreterSettingId": "spark"
         }
@@ -182,15 +294,15 @@
       "jobName": "paragraph_1537278422662_70533666",
       "id": "20180918-134702_1087493329",
       "dateCreated": "2018-09-18 13:47:02.662",
-      "dateStarted": "2018-09-18 13:47:44.895",
-      "dateFinished": "2018-09-18 13:47:45.651",
+      "dateStarted": "2018-09-22 16:32:36.212",
+      "dateFinished": "2018-09-22 16:32:36.814",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%pyspark\n# cleaning data\n\ndata \u003d htmlDF.select(\u0027text\u0027).rdd\n\n# remove null element from data (MapPartitionsRDD)\ndata_remove_null \u003d data.filter(lambda e: len(e) \u003e 0)\n#.collect()\n\n#tokenize words and filter out stop_words and not alpha\nword_filter \u003d data_remove_null.map(lambda line: re.split(\u0027 \u0027, line[0])).map(lambda txt: [w.lower() for w in txt if w.lower().isalpha()]).map(lambda txt: [w for w in txt if w not in stop_words]).map(lambda txt: [w for w in txt if len(w) \u003e 2 and len(w) \u003c 17])\n#sc.parallelize(data_remove_null).map(lambda line: re.split(\u0027 \u0027, line[0]))\n#.filter(lambda word: word.lower().isalpha())\n#.filter(lambda word: word.lower() not in stop_words).filter(lambda word: len(word) \u003e 2).filter(lambda word: len(word) \u003c 17)\n\n# word count\nword_count \u003d word_filter.flatMap(lambda x: x).map(lambda word: (word.lower(), 1)).reduceByKey(lambda v1, v2: v1 + v2).map(lambda x: (x[1], x[0])).sortByKey(ascending \u003d False)\nword_count.take(100)",
+      "text": "%pyspark\n# cleaning data\n\ndata \u003d htmlDF.select(\u0027text\u0027).rdd\n\n# remove null element from data (MapPartitionsRDD)\ndata_remove_null \u003d data.filter(lambda e: len(e) \u003e 0)\n#.collect()\n\n#tokenize words and filter out stop_words and not alpha and length is between 3 and 16\nword_filter \u003d data_remove_null.map(lambda line: re.split(\u0027 \u0027, line[0])).map(lambda txt: [w.lower() for w in txt if w.lower().isalpha()]).map(lambda txt: [w for w in txt if w not in stop_words]).map(lambda txt: [w for w in txt if len(w) \u003e 2 and len(w) \u003c 17])\n#sc.parallelize(data_remove_null).map(lambda line: re.split(\u0027 \u0027, line[0]))\n#.filter(lambda word: word.lower().isalpha())\n#.filter(lambda word: word.lower() not in stop_words).filter(lambda word: len(word) \u003e 2).filter(lambda word: len(word) \u003c 17)\n\n# word count\nword_count \u003d word_filter.flatMap(lambda x: x).map(lambda word: (word.lower(), 1)).reduceByKey(lambda v1, v2: v1 + v2).map(lambda x: (x[1], x[0])).sortByKey(ascending \u003d False)\nword_count.take(100)",
       "user": "anonymous",
-      "dateUpdated": "2018-09-18 13:47:56.917",
+      "dateUpdated": "2018-09-22 16:32:36.895",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -213,7 +325,7 @@
         "msg": [
           {
             "type": "TEXT",
-            "data": "[(16914, u\u0027hurricane\u0027), (11100, u\u0027var\u0027), (6964, u\u0027irma\u0027), (6432, u\u0027matthew\u0027), (5096, u\u0027florida\u0027), (4406, u\u0027storm\u0027), (2993, u\u0027october\u0027), (2984, u\u0027aug\u0027), (2972, u\u0027news\u0027), (2914, u\u0027people\u0027), (2415, u\u0027north\u0027), (2252, u\u0027fullscreen\u0027), (2232, u\u0027said\u0027), (2209, u\u0027function\u0027), (1972, u\u0027national\u0027), (1893, u\u0027winds\u0027), (1889, u\u0027images\u0027), (1639, u\u0027category\u0027), (1631, u\u0027carolina\u0027), (1622, u\u0027home\u0027), (1601, u\u0027residents\u0027), (1583, u\u0027hit\u0027), (1561, u\u0027weather\u0027), (1503, u\u0027video\u0027), (1475, u\u0027south\u0027), (1424, u\u0027new\u0027), (1413, u\u0027could\u0027), (1370, u\u0027island\u0027), (1292, u\u0027power\u0027), (1282, u\u0027water\u0027), (1229, u\u0027puerto\u0027), (1178, u\u0027washington\u0027), (1178, u\u0027rain\u0027), (1149, u\u0027coast\u0027), (1147, u\u0027haiti\u0027), (1138, u\u0027islands\u0027), (1113, u\u0027one\u0027), (1091, u\u0027keys\u0027), (1090, u\u0027watch\u0027), (1053, u\u0027today\u0027), (1042, u\u0027flooded\u0027), (1038, u\u0027caribbean\u0027), (997, u\u0027still\u0027), (992, u\u0027hits\u0027), (955, u\u0027via\u0027), (941, u\u0027homes\u0027), (940, u\u0027september\u0027), (933, u\u0027damage\u0027), (919, u\u0027caused\u0027), (914, u\u0027back\u0027), (904, u\u0027miami\u0027), (901, u\u0027center\u0027), (900, u\u0027beach\u0027), (895, u\u0027million\u0027), (892, u\u0027along\u0027), (872, u\u0027east\u0027), (870, u\u0027expected\u0027), (868, u\u0027get\u0027), (848, u\u0027high\u0027), (847, u\u0027also\u0027), (846, u\u0027emergency\u0027), (840, u\u0027gnewswp\u0027), (830, u\u0027else\u0027), (823, u\u0027key\u0027), (813, u\u0027world\u0027), (801, u\u0027global\u0027), (799, u\u0027usa\u0027), (785, u\u0027flooding\u0027), (783, u\u0027without\u0027), (782, u\u0027landfall\u0027), (776, u\u0027share\u0027), (775, u\u0027email\u0027), (766, u\u0027heavy\u0027), (763, u\u0027like\u0027), (751, u\u0027street\u0027), (749, u\u0027first\u0027), (747, u\u0027state\u0027), (747, u\u0027many\u0027), (743, u\u0027house\u0027), (742, u\u0027officials\u0027), (741, u\u0027two\u0027), (737, u\u0027region\u0027), (734, u\u0027policy\u0027), (734, u\u0027trump\u0027), (732, u\u0027west\u0027), (726, u\u0027atlantic\u0027), (726, u\u0027hurricanes\u0027), (725, u\u0027near\u0027), (721, u\u0027return\u0027), (712, u\u0027typeof\u0027), (708, u\u0027use\u0027), (707, u\u0027made\u0027), (702, u\u0027rico\u0027), (692, u\u0027bahamas\u0027), (683, u\u0027local\u0027), (673, u\u0027network\u0027), (672, u\u0027attachment\u0027), (667, u\u0027toward\u0027), (666, u\u0027area\u0027), (659, u\u0027virgin\u0027)]\n"
+            "data": "[(16914, u\u0027hurricane\u0027), (11100, u\u0027var\u0027), (6964, u\u0027irma\u0027), (6432, u\u0027matthew\u0027), (5096, u\u0027florida\u0027), (4406, u\u0027storm\u0027), (2993, u\u0027october\u0027), (2984, u\u0027aug\u0027), (2972, u\u0027news\u0027), (2914, u\u0027people\u0027), (2415, u\u0027north\u0027), (2252, u\u0027fullscreen\u0027), (2232, u\u0027said\u0027), (2209, u\u0027function\u0027), (1972, u\u0027national\u0027), (1893, u\u0027winds\u0027), (1889, u\u0027images\u0027), (1639, u\u0027category\u0027), (1631, u\u0027carolina\u0027), (1622, u\u0027home\u0027), (1601, u\u0027residents\u0027), (1583, u\u0027hit\u0027), (1561, u\u0027weather\u0027), (1503, u\u0027video\u0027), (1475, u\u0027south\u0027), (1424, u\u0027new\u0027), (1413, u\u0027could\u0027), (1370, u\u0027island\u0027), (1292, u\u0027power\u0027), (1282, u\u0027water\u0027), (1229, u\u0027puerto\u0027), (1178, u\u0027washington\u0027), (1178, u\u0027rain\u0027), (1149, u\u0027coast\u0027), (1147, u\u0027haiti\u0027), (1138, u\u0027islands\u0027), (1113, u\u0027one\u0027), (1091, u\u0027keys\u0027), (1090, u\u0027watch\u0027), (1053, u\u0027today\u0027), (1042, u\u0027flooded\u0027), (1038, u\u0027caribbean\u0027), (997, u\u0027still\u0027), (992, u\u0027hits\u0027), (955, u\u0027via\u0027), (941, u\u0027homes\u0027), (940, u\u0027september\u0027), (933, u\u0027damage\u0027), (919, u\u0027caused\u0027), (914, u\u0027back\u0027), (904, u\u0027miami\u0027), (901, u\u0027center\u0027), (900, u\u0027beach\u0027), (895, u\u0027million\u0027), (892, u\u0027along\u0027), (872, u\u0027east\u0027), (870, u\u0027expected\u0027), (868, u\u0027get\u0027), (848, u\u0027high\u0027), (847, u\u0027also\u0027), (846, u\u0027emergency\u0027), (840, u\u0027gnewswp\u0027), (830, u\u0027else\u0027), (823, u\u0027key\u0027), (813, u\u0027world\u0027), (801, u\u0027global\u0027), (799, u\u0027usa\u0027), (785, u\u0027flooding\u0027), (783, u\u0027without\u0027), (782, u\u0027landfall\u0027), (776, u\u0027share\u0027), (775, u\u0027email\u0027), (766, u\u0027heavy\u0027), (763, u\u0027like\u0027), (751, u\u0027street\u0027), (749, u\u0027first\u0027), (747, u\u0027many\u0027), (747, u\u0027state\u0027), (743, u\u0027house\u0027), (742, u\u0027officials\u0027), (741, u\u0027two\u0027), (737, u\u0027region\u0027), (734, u\u0027policy\u0027), (734, u\u0027trump\u0027), (732, u\u0027west\u0027), (726, u\u0027atlantic\u0027), (726, u\u0027hurricanes\u0027), (725, u\u0027near\u0027), (721, u\u0027return\u0027), (712, u\u0027typeof\u0027), (708, u\u0027use\u0027), (707, u\u0027made\u0027), (702, u\u0027rico\u0027), (692, u\u0027bahamas\u0027), (683, u\u0027local\u0027), (673, u\u0027network\u0027), (672, u\u0027attachment\u0027), (667, u\u0027toward\u0027), (666, u\u0027area\u0027), (659, u\u0027virgin\u0027)]\n"
           }
         ]
       },
@@ -224,9 +336,9 @@
           "tooltip": "View in Spark web UI",
           "group": "spark",
           "values": [
+            "http://172.17.0.2:4040/jobs/job?id\u003d3",
             "http://172.17.0.2:4040/jobs/job?id\u003d4",
-            "http://172.17.0.2:4040/jobs/job?id\u003d5",
-            "http://172.17.0.2:4040/jobs/job?id\u003d6"
+            "http://172.17.0.2:4040/jobs/job?id\u003d5"
           ],
           "interpreterSettingId": "spark"
         }
@@ -235,15 +347,15 @@
       "jobName": "paragraph_1537278458507_-540149638",
       "id": "20180918-134738_1060292478",
       "dateCreated": "2018-09-18 13:47:38.507",
-      "dateStarted": "2018-09-18 13:47:57.000",
-      "dateFinished": "2018-09-18 13:48:00.745",
+      "dateStarted": "2018-09-22 16:32:36.937",
+      "dateFinished": "2018-09-22 16:32:41.062",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%pyspark\n#Lemmatizer\nimport nltk\nnltk.download(\u0027wordnet\u0027)\nfrom nltk.stem import WordNetLemmatizer\n",
       "user": "anonymous",
-      "dateUpdated": "2018-09-18 13:48:09.758",
+      "dateUpdated": "2018-09-22 16:32:41.143",
       "config": {
         "colWidth": 12.0,
         "fontSize": 9.0,
@@ -274,24 +386,78 @@
       "jobName": "paragraph_1537278476917_-708476899",
       "id": "20180918-134756_598905283",
       "dateCreated": "2018-09-18 13:47:56.917",
-      "dateStarted": "2018-09-18 13:48:09.798",
-      "dateFinished": "2018-09-18 13:48:12.097",
+      "dateStarted": "2018-09-22 16:32:41.175",
+      "dateFinished": "2018-09-22 16:32:42.131",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%pyspark\n",
+      "text": "%spark.pyspark\n#Named entity extraction\n\n# remove blank lines\nsentences_remove_null \u003d data.filter(lambda x: len(x[0]) \u003e 0).collect()\n\ndef sentence_splitter(article):\n    return nltk.sent_tokenize(article)\n\n# --------------------------------------------------------------------------\n# An alternative way to fix the conflict between PySpark and Spacy\n# --------------------------------------------------------------------------\n# Spacy isn\u0027t serializable but loading it is semi-expensive\nclass SpacyMagic(object):\n    \"\"\"\n    Simple Spacy Magic to minimize loading time.\n    \u003e\u003e\u003e SpacyMagic.get(\"en\")\n    \u003cspacy.en.English ...\n    \"\"\"\n    _spacys \u003d {}\n\n    @classmethod\n    def get(cls, lang):\n        if lang not in cls._spacys:\n            import spacy\n            cls._spacys[lang] \u003d spacy.load(lang)\n        return cls._spacys[lang]\n# --------------------------------------------------------------------------\n\n\ndef name_tagger(sentence):\n    \n    nlp \u003d SpacyMagic.get(\u0027en_core_web_sm\u0027)\n    \n    ne_list \u003d []\n    doc \u003d nlp(sentence)\n    for ent in doc.ents:\n        ne_list.append([ent.text, ent.label_])\n    return ne_list\n    \nsentence_list \u003d sc.parallelize(sentences_remove_null).flatMap(lambda line: sentence_splitter(line[\u0027text\u0027]))\nne_list \u003d sentence_list.flatMap(lambda sentence: name_tagger(sentence)).map(lambda ne: (\u0027 \u0027.join(ne), 1)).reduceByKey(lambda v1, v2: v1 + v2).map(lambda x: (x[1], x[0])).sortByKey(ascending \u003d False)\nne_list.take(50)",
       "user": "anonymous",
-      "dateUpdated": "2018-09-18 13:48:09.761",
+      "dateUpdated": "2018-09-22 16:34:15.532",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "[(5595, u\u0027Florida GPE\u0027), (4410, u\u0027Hurricane Matthew EVENT\u0027), (3586, u\u0027Irma GPE\u0027), (2099, u\u0027Haiti GPE\u0027), (1550, u\u0027Fla. GPE\u0027), (1425, u\u0027North Carolina GPE\u0027), (1321, u\u0027Matthew PERSON\u0027), (1279, u\u0027Hurricane Irma GPE\u0027), (1234, u\u0027\u0026\u0026 ORG\u0027), (1114, u\u0027Caribbean LOC\u0027), (1107, u\u00272018 DATE\u0027), (1055, u\u0027Bahamas GPE\u0027), (1022, u\u0027Cuba GPE\u0027), (997, u\u0027Miami GPE\u0027), (925, u\u00270 CARDINAL\u0027), (903, u\u0027U.S. GPE\u0027), (902, u\u0027Hurricane Irma EVENT\u0027), (887, u\u0027googletag.cmd.push(function PERSON\u0027), (881, u\u0027GMT+0000 PERSON\u0027), (878, u\u0027Puerto Rico GPE\u0027), (797, u\u0027( MONEY\u0027), (757, u\u00271 CARDINAL\u0027), (720, u\u0027AP ORG\u0027), (716, u\u0027Washington GPE\u0027), (673, u\u0027Georgia GPE\u0027), (644, u\u002709 CARDINAL\u0027), (641, u\u0027first ORDINAL\u0027), (631, u\u0027Wednesday DATE\u0027), (628, u\u00273 CARDINAL\u0027), (623, u\u0027South Carolina GPE\u0027), (615, u\u00275 CARDINAL\u0027), (592, u\u0027Sunday DATE\u0027), (581, u\u0027Lumberton GPE\u0027), (569, u\u0027Thursday DATE\u0027), (563, u\u0027October 7, 2016 DATE\u0027), (559, u\u0027Saturday DATE\u0027), (553, u\u00272017 DATE\u0027), (551, u\u00270px ORDINAL\u0027), (534, u\u0027Friday DATE\u0027), (517, u\u0027one CARDINAL\u0027), (507, u\u0027Barbuda PERSON\u0027), (486, u\u0027California GPE\u0027), (475, u\u0027Atlantic LOC\u0027), (469, u\u0027US GPE\u0027), (450, u\u0027FoundationSans NORP\u0027), (446, u\u0027October 12, 2016 DATE\u0027), (444, u\u0027two CARDINAL\u0027), (442, u\u0027type\u003d\\\\\"text/javascript\\\\ ORG\u0027), (442, u\u0027PoWaLoaderWapo.js?_\u003d20180521B\\\\ PRODUCT\u0027), (431, u\u0027Canada GPE\u0027)]\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.17.0.2:4040/jobs/job?id\u003d10",
+            "http://172.17.0.2:4040/jobs/job?id\u003d11",
+            "http://172.17.0.2:4040/jobs/job?id\u003d12",
+            "http://172.17.0.2:4040/jobs/job?id\u003d13"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1537278489758_1617619117",
+      "id": "20180918-134809_2081580830",
+      "dateCreated": "2018-09-18 13:48:09.759",
+      "dateStarted": "2018-09-22 16:34:15.566",
+      "dateFinished": "2018-09-22 16:47:40.967",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark.pyspark\n",
+      "user": "anonymous",
+      "dateUpdated": "2018-09-22 16:28:09.439",
       "config": {},
       "settings": {
         "params": {},
         "forms": {}
       },
       "apps": [],
-      "jobName": "paragraph_1537278489758_1617619117",
-      "id": "20180918-134809_2081580830",
-      "dateCreated": "2018-09-18 13:48:09.759",
+      "jobName": "paragraph_1537633689437_-54944096",
+      "id": "20180922-162809_1281674420",
+      "dateCreated": "2018-09-22 16:28:09.437",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }
@@ -301,7 +467,8 @@
   "noteParams": {},
   "noteForms": {},
   "angularObjects": {
-    "md:shared_process": [],
+    "python:shared_process": [],
+    "sh:shared_process": [],
     "spark:shared_process": []
   },
   "config": {
