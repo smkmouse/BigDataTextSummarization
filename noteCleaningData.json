@@ -1,0 +1,1006 @@
+{
+  "paragraphs": [
+    {
+      "text": "%dep\n// load external dependencies\n// You need to restart the Spark interpreter in configuration of this page first in order to make the dependency take effect\nz.load(\"/archive_spark/archivespark_dlrl/libs/stanford-corenlp-3.5.1.jar\")\nz.load(\"/archive_spark/archivespark_dlrl/libs/opennlp-tools-1.9.0.jar\")\nz.load(\"/archive_spark/archivespark_dlrl/libs/en-sent.bin\")",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-02 15:42:15.923",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res0: org.apache.zeppelin.dep.Dependency \u003d org.apache.zeppelin.dep.Dependency@18959353\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1538246535031_-558866840",
+      "id": "20180929-184215_1936336927",
+      "dateCreated": "2018-09-29 18:42:15.031",
+      "dateStarted": "2018-10-02 15:42:16.434",
+      "dateFinished": "2018-10-02 15:42:28.647",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "import de.l3s.archivespark._\nimport de.l3s.archivespark.implicits._\nimport de.l3s.archivespark.enrich.functions._\nimport de.l3s.archivespark.specific.warc.implicits._\nimport de.l3s.archivespark.specific.warc.specs.WarcCdxHdfsSpec\nimport de.l3s.archivespark.specific.warc.specs.WarcHdfsSpec\nimport de.l3s.archivespark.specific.warc.enrichfunctions._\n",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-02 15:42:30.900",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import de.l3s.archivespark._\nimport de.l3s.archivespark.implicits._\nimport de.l3s.archivespark.enrich.functions._\nimport de.l3s.archivespark.specific.warc.implicits._\nimport de.l3s.archivespark.specific.warc.specs.WarcCdxHdfsSpec\nimport de.l3s.archivespark.specific.warc.specs.WarcHdfsSpec\nimport de.l3s.archivespark.specific.warc.enrichfunctions._\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1538442523736_-864762162",
+      "id": "20181002-010843_1486674917",
+      "dateCreated": "2018-10-02 01:08:43.736",
+      "dateStarted": "2018-10-02 15:42:31.034",
+      "dateFinished": "2018-10-02 15:42:40.718",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\nLoad Data",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-02 13:38:13.065",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "tableHide": false,
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eLoad Data\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1538442547954_-2022054845",
+      "id": "20181002-010907_1038580133",
+      "dateCreated": "2018-10-02 01:09:07.954",
+      "dateStarted": "2018-10-02 13:38:13.098",
+      "dateFinished": "2018-10-02 13:38:16.025",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "// load data from local file system\nval warcPath \u003d \"/share_dir/small_data_input/\"\nval cdxPath \u003d \"/share_dir/small_data_input/Hurricane_Matthew.cdx\"\nval records \u003d ArchiveSpark.load(WarcCdxHdfsSpec(cdxPath,warcPath))\n",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-02 15:42:43.945",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "warcPath: String \u003d /share_dir/small_data_input/\ncdxPath: String \u003d /share_dir/small_data_input/Hurricane_Matthew.cdx\nrecords: org.apache.spark.rdd.RDD[de.l3s.archivespark.specific.warc.WarcRecord] \u003d MapPartitionsRDD[2] at mapPartitions at ArchiveSpark.scala:113\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1538442659852_2128630417",
+      "id": "20181002-011059_2034661721",
+      "dateCreated": "2018-10-02 01:10:59.853",
+      "dateStarted": "2018-10-02 15:42:44.062",
+      "dateFinished": "2018-10-02 15:42:47.188",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "Process Data",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-02 15:42:51.711",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "ERROR",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u003cconsole\u003e:41: error: value Data is not a member of object Process\n       Process Data\n               ^\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1538442740464_-1734745845",
+      "id": "20181002-011220_252340329",
+      "dateCreated": "2018-10-02 01:12:20.464",
+      "dateStarted": "2018-10-02 15:42:51.826",
+      "dateFinished": "2018-10-02 15:42:51.960",
+      "status": "ERROR",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nval pages \u003d records.filter(r \u003d\u003e r.mime \u003d\u003d \"text/html\" \u0026\u0026 r.status \u003d\u003d 200) // extract valid webpages\nval earliest \u003d pages.distinctValue(_.surtUrl) {(a, b) \u003d\u003e if (a.time \u003c b.time) a else b} // filter out same urls, pick the latest snap\nval enriched \u003d earliest.enrich(HtmlText) // Enrich with Htmltext\nenriched.peekJson",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-02 15:42:55.289",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "pages: org.apache.spark.rdd.RDD[de.l3s.archivespark.specific.warc.WarcRecord] \u003d MapPartitionsRDD[3] at filter at \u003cconsole\u003e:46\nearliest: org.apache.spark.rdd.RDD[de.l3s.archivespark.specific.warc.WarcRecord] \u003d MapPartitionsRDD[6] at values at GenericHelpersRDD.scala:37\nenriched: org.apache.spark.rdd.RDD[de.l3s.archivespark.specific.warc.WarcRecord] \u003d MapPartitionsRDD[8] at mapPartitions at EnrichableRDD.scala:40\nres8: String \u003d\n{\n  \"record\" : {\n    \"surtUrl\" : \"com,huffingtonpost)/entry/bahamas-water-receded-hurricane-irma_us_59b49f1de4b0dfaafcf84e86?section\u003dus_green\",\n    \"timestamp\" : \"20180819001642\",\n    \"originalUrl\" : \"http://www.huffingtonpost.com/entry/bahamas-water-receded-hurricane-irma_us_59b49f1de4b0dfaafcf84e86?section\u003dus_green\",\n    \"mime\" : \"text/html\",\n    \"status\" : 200,\n    \"digest\" : \"OLQJ5RXE2RXY3FUQP5XFLPCPE2LVYTCP\",\n    \"redirectUrl\" : \"-\",\n    \"meta\" : \"-\",\n    \"compressedSize\" : 652\n  },\n  \"payload\" : {\n    \"string\" : {\n      \"html\" : {\n        \"body\" : {\n          \"text\" : \"403 - Forbidden\"\n        }\n      }\n    }\n  }\n}\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.17.0.2:4040/jobs/job?id\u003d0"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1538442791292_-1240369158",
+      "id": "20181002-011311_649584035",
+      "dateCreated": "2018-10-02 01:13:11.292",
+      "dateStarted": "2018-10-02 15:42:55.378",
+      "dateFinished": "2018-10-02 15:42:59.887",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nval Terms \u003d LowerCase.of(HtmlText).mapMulti(\"terms\") { text: String \u003d\u003e text.split(\"\\\\W+\").distinct } // Define Terms enrichment within HTML body\nval Title \u003d HtmlText.of(Html.first(\"title\")) // Define Title enrichment within HTML body\nval enriched \u003d earliest.enrich(Terms).enrich(Title) // Enrich with Terms and Title\nenriched.peekJson",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-02 15:43:02.456",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Terms: de.l3s.archivespark.enrich.DependentEnrichFunc[de.l3s.archivespark.enrich.EnrichRoot with de.l3s.archivespark.enrich.dataloads.ByteContentLoad,String] with de.l3s.archivespark.enrich.SingleField[Seq[String]] \u003d de.l3s.archivespark.enrich.EnrichFunc$$anon$3@150b47f7\nTitle: de.l3s.archivespark.enrich.EnrichFunc[de.l3s.archivespark.enrich.EnrichRoot with de.l3s.archivespark.enrich.dataloads.ByteContentLoad,String] with de.l3s.archivespark.enrich.DefaultFieldAccess[String,String] \u003d de.l3s.archivespark.enrich.PipedDependentEnrichFuncWithDefaultField@45ca27e4\nenriched: org.apache.spark.rdd.RDD[de.l3s.archivespark.specific.warc.WarcRecord] \u003d MapPartitionsRDD[12] at mapPartitions at EnrichableRDD.scala:40\nres10: String \u003d\n{\n  \"record\" : {\n    \"surtUrl\" : \"com,huffingtonpost)/entry/bahamas-water-receded-hurricane-irma_us_59b49f1de4b0dfaafcf84e86?section\u003dus_green\",\n    \"timestamp\" : \"20180819001642\",\n    \"originalUrl\" : \"http://www.huffingtonpost.com/entry/bahamas-water-receded-hurricane-irma_us_59b49f1de4b0dfaafcf84e86?section\u003dus_green\",\n    \"mime\" : \"text/html\",\n    \"status\" : 200,\n    \"digest\" : \"OLQJ5RXE2RXY3FUQP5XFLPCPE2LVYTCP\",\n    \"redirectUrl\" : \"-\",\n    \"meta\" : \"-\",\n    \"compressedSize\" : 652\n  },\n  \"payload\" : {\n    \"string\" : {\n      \"html\" : {\n        \"body\" : {\n          \"text\" : {\n            \"lowercase\" : {\n              \"terms\" : [ \"403\", \"forbidden\" ]\n            }\n          }\n        },\n        \"title\" : {\n          \"text\" : \"403 - Forbidden\"\n        }\n      }\n    }\n  }\n}\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://172.17.0.2:4040/jobs/job?id\u003d1"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1538442846620_-1322425333",
+      "id": "20181002-011406_1971442375",
+      "dateCreated": "2018-10-02 01:14:06.620",
+      "dateStarted": "2018-10-02 15:43:02.568",
+      "dateFinished": "2018-10-02 15:43:04.398",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n// get desired information from the dataset\n// map function applies all operations inside in element wise. In this case, all elements will be distributed for parallel computation.\nval result \u003d enriched.map( r \u003d\u003e {\n    val title \u003d r.valueOrElse(Title, \"\").replaceAll(\"[\\\\t\\\\n]\", \" \") // get title value \n    val text \u003d r.valueOrElse(HtmlText, \"\").replaceAll(\"[\\\\t\\\\n]\", \" \") // get text value\n    // concatenate URL, timestamp, title and text with in the format of tuple, tuple can be converted to Dataframe format later\n    (r.originalUrl, r.timestamp,title, text)\n})",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-02 15:43:06.545",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "result: org.apache.spark.rdd.RDD[(String, String, String, String)] \u003d MapPartitionsRDD[13] at map at \u003cconsole\u003e:59\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1538442863975_842520510",
+      "id": "20181002-011423_1044687382",
+      "dateCreated": "2018-10-02 01:14:23.975",
+      "dateStarted": "2018-10-02 15:43:06.649",
+      "dateFinished": "2018-10-02 15:43:07.608",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nresult.first",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-02 13:38:56.445",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res14: (String, String, String, String) \u003d (http://www.huffingtonpost.com/entry/bahamas-water-receded-hurricane-irma_us_59b49f1de4b0dfaafcf84e86?section\u003dus_green,20180819001642,403 - Forbidden,403 - Forbidden)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1538442882090_186364385",
+      "id": "20181002-011442_896881532",
+      "dateCreated": "2018-10-02 01:14:42.090",
+      "dateStarted": "2018-10-02 13:38:56.517",
+      "dateFinished": "2018-10-02 13:38:57.187",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nval result_df \u003d result.toDF(\"originalUrl\",\"timestamp\",\"title\",\"text\") // convert to DataFrame format inorder to export Json format and perform SQL queries as needed",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-02 13:38:59.348",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "result_df: org.apache.spark.sql.DataFrame \u003d [originalUrl: string, timestamp: string ... 2 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1538442891463_-382833309",
+      "id": "20181002-011451_1969326093",
+      "dateCreated": "2018-10-02 01:14:51.463",
+      "dateStarted": "2018-10-02 13:38:59.426",
+      "dateFinished": "2018-10-02 13:39:02.189",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nresult_df.show",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-02 13:39:04.539",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------------------+--------------+--------------------+--------------------+\n|         originalUrl|     timestamp|               title|                text|\n+--------------------+--------------+--------------------+--------------------+\n|http://www.huffin...|20180819001642|     403 - Forbidden|     403 - Forbidden|\n|https://www.washi...|20180819001931|Irma intensifies ...|Sections Home Dem...|\n|https://globalnew...|20180819002308|‘Get out now’: FE...|/* */ if ( \u0027funct...|\n|http://www.foxnew...|20180819001431|Extremely dangero...|Fox News U.S. Wor...|\n|https://globalnew...|20180819002152|Hurricane Irma: W...|/* */ if ( \u0027funct...|\n|http://www.orland...|20180819002115|Hurricane Florida...|Be prepared with ...|\n|https://globalnew...|20180819002238|Hurricane Watch |...|{{data.title}} Sp...|\n|http://sanfrancis...|20180819001423|Mandatory Evacuat...|KPIX 5 Live Menu ...|\n|https://www.cbsne...|20180819002110|Hurricane Matthew...|@font-face{font-f...|\n|https://www.cbsne...|20180819002018|Florida - Hurrica...|@font-face{font-f...|\n|https://globalnew...|20180819002153|Florida Hurricane...|{{data.title}} Sp...|\n|http://www.cbsnew...|20180819001425|Hurricane Maria p...|@font-face{font-f...|\n|https://ktla.com/...|20180819002120|Hurricane Jose’s ...|GoSearch Replay: ...|\n|https://www.cbsne...|20180819001956|UN soldiers - Hur...|@font-face{font-f...|\n|http://www.nbcmia...|20180819001844|Category 1 Hurric...|//must have for c...|\n|https://www.washi...|20180819001911|Hurricane Jose st...|Sections Home Dem...|\n|http://wapo.st/2j...|20180819002115|Hurricane Irma te...|1 Desktop notific...|\n|https://globalnew...|20180819002154|Hurricane Irma st...|{{data.title}} Sp...|\n|http://www.nbcmia...|20180819001653|Killer Hurricane ...|//must have for c...|\n|https://www.usato...|20180819002137|Hurricane Irma ra...|SUBSCRIBE NOWto g...|\n+--------------------+--------------+--------------------+--------------------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1538442914713_1917693459",
+      "id": "20181002-011514_1326349487",
+      "dateCreated": "2018-10-02 01:15:14.713",
+      "dateStarted": "2018-10-02 13:39:04.616",
+      "dateFinished": "2018-10-02 13:39:07.480",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "Further extract with clean sentences",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-02 01:17:42.107",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1538443048497_1108474944",
+      "id": "20181002-011728_1899550283",
+      "dateCreated": "2018-10-02 01:17:28.497",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "import java.io.{FileOutputStream, PrintStream,FileInputStream,PrintWriter}\nimport opennlp.tools.sentdetect.SentenceDetectorME\nimport opennlp.tools.sentdetect.SentenceModel\nimport org.apache.spark.SparkFiles\nimport org.apache.spark.sql.{Row, SparkSession}",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-02 13:39:11.600",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import java.io.{FileOutputStream, PrintStream, FileInputStream, PrintWriter}\nimport opennlp.tools.sentdetect.SentenceDetectorME\nimport opennlp.tools.sentdetect.SentenceModel\nimport org.apache.spark.SparkFiles\nimport org.apache.spark.sql.{Row, SparkSession}\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1538443062191_1364483398",
+      "id": "20181002-011742_371110264",
+      "dateCreated": "2018-10-02 01:17:42.191",
+      "dateStarted": "2018-10-02 13:39:11.682",
+      "dateFinished": "2018-10-02 13:39:12.816",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "// get Array of elements: URL, timestamp, HtmlText\nval extracted \u003d enriched.map(r \u003d\u003e {\n      val text \u003d r.valueOrElse(HtmlText, \"\").replaceAll(\"[\\\\t\\\\n]\", \" \")\n      Array[String](r.originalUrl, r.timestamp, text)\n    })",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-02 13:58:37.750",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "extracted: org.apache.spark.rdd.RDD[Array[String]] \u003d MapPartitionsRDD[53] at map at \u003cconsole\u003e:63\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1538443075680_-401871221",
+      "id": "20181002-011755_1050787703",
+      "dateCreated": "2018-10-02 01:17:55.680",
+      "dateStarted": "2018-10-02 13:58:37.844",
+      "dateFinished": "2018-10-02 13:58:39.739",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "// clean html text with OpenNLP tool\n// notice we use mapPartitions instead of map here: mapPartitions function apply operations in partition wise. In this case, elements are pre-distribted to different partitions, each partition will perform same operations and apply them to given records. In this particular example, the file loading and model initialization operations are heavy and can not be serialized in element wise, thus we have to use mapPartitions instead of map. \nval cleaned \u003d extracted.mapPartitions(partition \u003d\u003e {\n      val path \u003d SparkFiles.get(\"en-sent.bin\") // get file path from --files option\n      val en_sent \u003d new FileInputStream(path) // read external file\n      val model \u003d new SentenceModel(en_sent) // create sentence model\n      val detector \u003d new SentenceDetectorME(model) // create sentence detector\n      val regex \u003d \"[A-Za-z0-9\\\\,\\\\.\\\\-\\\\;\\\\:\\\\(\\\\)\\\\\u0027\\\\\u0026 ]+\\\\.\" // regex for filtering\n\n      partition.map(r \u003d\u003e {\n        val sentences \u003d detector.sentDetect(r(2)).filter(_.matches(regex)).mkString(\" \") // apply sentence detector\n        (r(0), r(1), sentences) // return URL, timestamp, sentences\n      })\n\n    })",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-02 13:39:43.651",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "cleaned: org.apache.spark.rdd.RDD[(String, String, String)] \u003d MapPartitionsRDD[18] at mapPartitions at \u003cconsole\u003e:66\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1538443091511_-1799113875",
+      "id": "20181002-011811_1843178530",
+      "dateCreated": "2018-10-02 01:18:11.511",
+      "dateStarted": "2018-10-02 13:39:43.713",
+      "dateFinished": "2018-10-02 13:39:44.453",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val cleaned_df \u003d cleaned.toDF(\"URL\", \"Timestamp\", \"Sentences\") // convert to DataFrame format",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-02 13:39:47.634",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "cleaned_df: org.apache.spark.sql.DataFrame \u003d [URL: string, Timestamp: string ... 1 more field]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1538443118790_986603496",
+      "id": "20181002-011838_608854476",
+      "dateCreated": "2018-10-02 01:18:38.790",
+      "dateStarted": "2018-10-02 13:39:47.715",
+      "dateFinished": "2018-10-02 13:39:48.848",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "cleaned_df.show",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-02 13:39:53.509",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------------------+--------------+--------------------+\n|                 URL|     Timestamp|           Sentences|\n+--------------------+--------------+--------------------+\n|http://www.huffin...|20180819001642|                    |\n|https://www.washi...|20180819001931|By Angela Fritz ,...|\n|https://globalnew...|20180819002308|He warned that pa...|\n|http://www.foxnew...|20180819001431|All rights reserv...|\n|https://globalnew...|20180819002152|After making land...|\n|http://www.orland...|20180819002115|Be prepared with ...|\n|https://globalnew...|20180819002238|Branded content i...|\n|http://sanfrancis...|20180819001423|Minnis says the C...|\n|https://www.cbsne...|20180819002110|Matthew first mad...|\n|https://www.cbsne...|20180819002018|Matthew first mad...|\n|https://globalnew...|20180819002153|Branded content i...|\n|http://www.cbsnew...|20180819001425|Maria left millio...|\n|https://ktla.com/...|20180819002120|Please look at th...|\n|https://www.cbsne...|20180819001956|Matthew first mad...|\n|http://www.nbcmia...|20180819001844|UP NEXT X Tropica...|\n|https://www.washi...|20180819001911|About 95 percent ...|\n|http://wapo.st/2j...|20180819002115|Naples, Fort Myer...|\n|https://globalnew...|20180819002154|Branded content i...|\n|http://www.nbcmia...|20180819001653|With maximum sust...|\n|https://www.usato...|20180819002137|SUBSCRIBE NOWto g...|\n+--------------------+--------------+--------------------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1538443124011_-1595988984",
+      "id": "20181002-011844_1073407613",
+      "dateCreated": "2018-10-02 01:18:44.011",
+      "dateStarted": "2018-10-02 13:39:53.590",
+      "dateFinished": "2018-10-02 13:39:55.066",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "cleaned_df.repartition(1).write.mode(\"overwrite\").format(\"json\").save(\"/share_dir/sample_output_clean/\") // export data to your local path",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-02 13:40:05.413",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1538444606742_-738244440",
+      "id": "20181002-014326_472815416",
+      "dateCreated": "2018-10-02 01:43:26.742",
+      "dateStarted": "2018-10-02 13:40:05.479",
+      "dateFinished": "2018-10-02 13:40:16.115",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nimport nltk\nimport re\nfrom nltk.corpus import stopwords\nnltk.download(\u0027stopwords\u0027)\nstop_words \u003d stopwords.words(\u0027english\u0027)",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-02 13:40:19.337",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "[nltk_data] Downloading package stopwords to /root/nltk_data...\n[nltk_data]   Unzipping corpora/stopwords.zip.\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1538445242751_-105402636",
+      "id": "20181002-015402_1773152228",
+      "dateCreated": "2018-10-02 01:54:02.751",
+      "dateStarted": "2018-10-02 13:40:19.400",
+      "dateFinished": "2018-10-02 13:40:21.993",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\npath \u003d \"/share_dir/sample_output_clean/*.json\"\nhtmlDF \u003d spark.read.json(path)",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-02 13:40:25.135",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1538444697368_1354524103",
+      "id": "20181002-014457_963806948",
+      "dateCreated": "2018-10-02 01:44:57.368",
+      "dateStarted": "2018-10-02 13:40:25.213",
+      "dateFinished": "2018-10-02 13:40:25.972",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nhtmlDF.printSchema()  # show data schema\nhtmlDF.show()",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-02 13:40:30.247",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- Sentences: string (nullable \u003d true)\n |-- Timestamp: string (nullable \u003d true)\n |-- URL: string (nullable \u003d true)\n\n+--------------------+--------------+--------------------+\n|           Sentences|     Timestamp|                 URL|\n+--------------------+--------------+--------------------+\n|                    |20180819001642|http://www.huffin...|\n|By Angela Fritz ,...|20180819001931|https://www.washi...|\n|He warned that pa...|20180819002308|https://globalnew...|\n|All rights reserv...|20180819001431|http://www.foxnew...|\n|After making land...|20180819002152|https://globalnew...|\n|Be prepared with ...|20180819002115|http://www.orland...|\n|Branded content i...|20180819002238|https://globalnew...|\n|Minnis says the C...|20180819001423|http://sanfrancis...|\n|Matthew first mad...|20180819002110|https://www.cbsne...|\n|Matthew first mad...|20180819002018|https://www.cbsne...|\n|Branded content i...|20180819002153|https://globalnew...|\n|Maria left millio...|20180819001425|http://www.cbsnew...|\n|Please look at th...|20180819002120|https://ktla.com/...|\n|Matthew first mad...|20180819001956|https://www.cbsne...|\n|UP NEXT X Tropica...|20180819001844|http://www.nbcmia...|\n|About 95 percent ...|20180819001911|https://www.washi...|\n|Naples, Fort Myer...|20180819002115|http://wapo.st/2j...|\n|Branded content i...|20180819002154|https://globalnew...|\n|With maximum sust...|20180819001653|http://www.nbcmia...|\n|SUBSCRIBE NOWto g...|20180819002137|https://www.usato...|\n+--------------------+--------------+--------------------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1538444986303_-1411823735",
+      "id": "20181002-014946_1520266269",
+      "dateCreated": "2018-10-02 01:49:46.303",
+      "dateStarted": "2018-10-02 13:40:30.314",
+      "dateFinished": "2018-10-02 13:40:30.608",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n# find number of records in the document\ntext \u003d htmlDF.select(\"Sentences\")\ntext.count()",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-02 13:40:34.785",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "442\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1538445013932_-663100413",
+      "id": "20181002-015013_532386472",
+      "dateCreated": "2018-10-02 01:50:13.932",
+      "dateStarted": "2018-10-02 13:40:34.854",
+      "dateFinished": "2018-10-02 13:40:35.373",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ntext.take(5)",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-02 13:58:50.405",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "[Row(Sentences\u003du\u0027\u0027), Row(Sentences\u003du\"By Angela Fritz , Deputy weather editor Greg Porter September 5, 2017 Hurricane Irma strengthened overnight to a dangerous Category 5 as it barrels toward the Greater Antilles and Southern Florida. Tuesday morning, NOAA Hurricane Hunters found the storm\u0027s maximum wind speeds are 175 mph. It now ranks among the strongest hurricanes ever recorded in the Atlantic Ocean. Forecasts suggest it will reach southern Florida and the Gulf of Mexico this weekend. Hurricane warnings have been issued for portions of the Leeward Islands and the Greater Antilles, including Puerto Rico. update. Over the weekend, the forecast track for this potentially devastating hurricane shifted south and west. It seems likely now that the storm will affect or strike the U.S. coast early next week, although meteorologists don\u0027t know exactly where. Florida and the Gulf Coast continue to be at risk. At 8 a.m. Irma will probably continue to be suppressed by the strong Atlantic high pressure beyond Wednesday, keeping the storm at major hurricane status and on a trajectory that places the storm in close proximity to Florida by next weekend. Potential U.S. impacts Forecasts from the European (top) and U.S. GFS (bottom) models Tuesday morning. It remains difficult to pinpoint if and where Irma will make landfall in the United States, but Florida is becoming the likely target. There is strong agreement in Irma\u0027s path through Friday, at which point Irma will probably be a major hurricane located just to the south of the Bahamas. The National Hurricane Center is forecasting tropical storm conditions to begin affecting Florida by Friday evening. All of the usual hazards are at play here; strong winds, heavy rain and dangerous storm surge. Storm surge may become the largest concern over the next few days, given the amount of time that Irma is spending over open water combined with the low-lying topography of southern Florida. Again, it should be noted that the forecast track for Irma will continue to change as we start to receive more aircraft data on the storm and as the large-scale environment features become more clear. At this point, residents from the gulf all the way to Maine should take special interest in forecast updates for Irma throughout the week. Brian Murphy contributed to this report. Angela Fritz Angela Fritz is an atmospheric scientist and The Washington Post\u0027s deputy weather editor. Before joining The Post, Fritz worked as a meteorologist at CNN in Atlanta and Weather Underground in San Francisco. She has a BS in meteorology and an MS in earth and atmospheric science. Follow Greg Porter Greg holds a B.S. in meteorology from the University of Massachusetts at Lowell and an M.S. in meteorology from the University of Maryland.\"), Row(Sentences\u003du\u0027He warned that parts of Florida would be out of electricity for days if not longer and that more than 100,000 people may need shelter. Please read our Commenting Policy first. All rights reserved. result found. results found.\u0027), Row(Sentences\u003du\u0027All rights reserved. All market data delayed 20 minutes. Irma remains a powerful Category 5 hurricane, the highest on the Saffir-Simspon Hurricane Wind Scale. Residents in Cuba and the Bahamas should be nearing completion on preparations for Irma. Hispaniola, Turks and Caicos Islands and southern Bahamas will face the brunt of Irma into Friday morning. The strongest winds are in the eye wall of the hurricane, which is expected to track near the Turks and Caicos and southern Bahamas through Friday night. As Irma continues to travel to the northwest through Saturday, northern Cuba and the central Bahamas will face the fury of powerful Irma. By Saturday night, Irma will turn to the north and will spread severe impacts into Florida and the central and northern Bahamas. Widespread power outages and significant damage to trees and structures are expected in these areas. The power may be out for weeks in some areas. Rough surf will spread outward from the storm and the strong winds from Irma will send a large and devastating storm surge across Turks and Caicos and Bahamas. In addition to damaging winds, Irma will also bring heavy rain over the next couple of days. In mountainous areas, especially Hispaniola and Cuba, flash flooding will be a much higher risk due to the water being funneled into valleys. There will also be a high risk for mudslides and road washouts. Weather conditions will improve on Friday for Hispaniola, and on Saturday for the Turks and Caicos and southern Bahamas as Irma pulls away. Dangerous weather conditions will begin to lessen on Sunday in Cuba, and on Monday for the northern and central Bahamas. Behind Irma, Hurricane Jose is churning about 800 miles east of the Lesser Antilles. Jose is expected to track to the west through the weekend and will eventually take a turn to the northwest. If Jose makes a close pass to the Leeward Islands, gusty winds and rain could impact islands that were battered by Irma. All rights reserved. All market data delayed 20 minutes.\u0027), Row(Sentences\u003du\u0027After making landfall in Cuba late Friday night, the hurricane is expected to reach the Florida Keys between 5 a.m and 7 a.m. Sunday. It then struck the British Virgin Islands. On the morning of the 7th, the storm struck Puerto Rico before moving on to the Turks and Caicos Islands. The storm is expected to gain strength again as it crosses over the water between Cuba and Florida. WATCH: Hurricane Irma weakens slightly as it pounds Cuba, expected to strengthen again The hurricane is expected to pour somewhere between 10 to 20 inches of rain over the Florida Keys although some areas could see as much as 25 inches. Irma is expected to drop between 10 to 20 inches of rain over the Florida Keys, with isolated amounts of 25 inches, through Tuesday night. The dead included 11 on St. Martin and St. Barts, four in the U.S. Virgin Islands, four in the British Virgin Islands and one each on Anguilla and Barbuda. WATCH: Video shows extent of severe Irma damage suffered by St. Martin Evacuations: Around 6.3 million people asked to evacuate from their homes in Florida. A hurricane watch has also been established in neighbouring Georgia where another 640,000 people are expected to evacuate. READ MORE: Hurricane Irma batters Cuba as millions in Florida rush to evacuate More than 50,000 people in Florida are seeking shelter in schools, community centres and churches as Hurricane Irma nears the state. Please read our Commenting Policy first. All rights reserved. result found. results found.\u0027)]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1538445041498_-292212446",
+      "id": "20181002-015041_467159382",
+      "dateCreated": "2018-10-02 01:50:41.498",
+      "dateStarted": "2018-10-02 13:58:50.460",
+      "dateFinished": "2018-10-02 13:58:50.804",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\ndata \u003d htmlDF.select(\u0027Sentences\u0027).rdd\n\n# remove null element from data (MapPartitionsRDD)\ndata_remove_null \u003d data.filter(lambda e: len(e) \u003e 0)\n#.collect()\n\n#tokenize words and filter out stop_words and not alpha and length is between 3 and 16\nword_filter \u003d data_remove_null.map(lambda line: re.split(\u0027 \u0027, line[0])).map(lambda txt: [w.lower() for w in txt if w.lower().isalpha()]).map(lambda txt: [w for w in txt if w not in stop_words]).map(lambda txt: [w for w in txt if len(w) \u003e 2 and len(w) \u003c 17])\n#sc.parallelize(data_remove_null).map(lambda line: re.split(\u0027 \u0027, line[0]))\n#.filter(lambda word: word.lower().isalpha())\n#.filter(lambda word: word.lower() not in stop_words).filter(lambda word: len(word) \u003e 2).filter(lambda word: len(word) \u003c 17)\n# word count\n",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-02 13:40:53.433",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1538445070423_1888020961",
+      "id": "20181002-015110_1249343094",
+      "dateCreated": "2018-10-02 01:51:10.423",
+      "dateStarted": "2018-10-02 13:40:53.509",
+      "dateFinished": "2018-10-02 13:40:53.630",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\nword_count \u003d word_filter.flatMap(lambda x: x).map(lambda word: (word.lower(), 1)).reduceByKey(lambda v1, v2: v1 + v2).map(lambda x: (x[1], x[0])).sortByKey(ascending \u003d False)\nword_count.take(100)",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-02 13:40:56.883",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "[(4388, u\u0027hurricane\u0027), (1857, u\u0027storm\u0027), (1795, u\u0027fullscreen\u0027), (1538, u\u0027matthew\u0027), (1422, u\u0027florida\u0027), (1394, u\u0027irma\u0027), (1131, u\u0027people\u0027), (855, u\u0027winds\u0027), (849, u\u0027today\u0027), (786, u\u0027category\u0027), (705, u\u0027said\u0027), (668, u\u0027usa\u0027), (662, u\u0027residents\u0027), (619, u\u0027news\u0027), (588, u\u0027via\u0027), (574, u\u0027coast\u0027), (565, u\u0027could\u0027), (544, u\u0027north\u0027), (508, u\u0027south\u0027), (490, u\u0027network\u0027), (488, u\u0027national\u0027), (478, u\u0027rain\u0027), (477, u\u0027water\u0027), (466, u\u0027home\u0027), (418, u\u0027center\u0027), (418, u\u0027expected\u0027), (412, u\u0027damage\u0027), (412, u\u0027hit\u0027), (411, u\u0027homes\u0027), (398, u\u0027miami\u0027), (393, u\u0027puerto\u0027), (390, u\u0027islands\u0027), (386, u\u0027island\u0027), (382, u\u0027power\u0027), (366, u\u0027many\u0027), (363, u\u0027along\u0027), (362, u\u0027also\u0027), (359, u\u0027carolina\u0027), (357, u\u0027heavy\u0027), (355, u\u0027one\u0027), (346, u\u0027officials\u0027), (341, u\u0027beach\u0027), (333, u\u0027evacuation\u0027), (313, u\u0027landfall\u0027), (310, u\u0027near\u0027), (304, u\u0027rights\u0027), (301, u\u0027still\u0027), (296, u\u0027caribbean\u0027), (293, u\u0027east\u0027), (290, u\u0027miles\u0027), (288, u\u0027shelter\u0027), (286, u\u0027tropical\u0027), (286, u\u0027two\u0027), (285, u\u0027flooded\u0027), (283, u\u0027toward\u0027), (280, u\u0027least\u0027), (275, u\u0027area\u0027), (271, u\u0027around\u0027), (267, u\u0027key\u0027), (266, u\u0027atlantic\u0027), (264, u\u0027wind\u0027), (264, u\u0027flooding\u0027), (263, u\u0027bahamas\u0027), (262, u\u0027state\u0027), (260, u\u0027mph\u0027), (258, u\u0027million\u0027), (258, u\u0027across\u0027), (258, u\u0027thursday\u0027), (258, u\u0027made\u0027), (253, u\u0027would\u0027), (246, u\u0027powerful\u0027), (244, u\u0027first\u0027), (243, u\u0027emergency\u0027), (239, u\u0027passed\u0027), (238, u\u0027get\u0027), (233, u\u0027wednesday\u0027), (232, u\u0027friday\u0027), (231, u\u0027left\u0027), (223, u\u0027early\u0027), (218, u\u0027rico\u0027), (218, u\u0027policy\u0027), (217, u\u0027away\u0027), (217, u\u0027ordered\u0027), (216, u\u0027west\u0027), (215, u\u0027sustained\u0027), (215, u\u0027cuba\u0027), (213, u\u0027naples\u0027), (210, u\u0027coastal\u0027), (209, u\u0027dominican\u0027), (209, u\u0027areas\u0027), (207, u\u0027hurricanes\u0027), (207, u\u0027haiti\u0027), (206, u\u0027southern\u0027), (206, u\u0027weather\u0027), (205, u\u0027maria\u0027), (203, u\u0027major\u0027), (202, u\u0027time\u0027), (201, u\u0027conditions\u0027), (201, u\u0027fort\u0027), (200, u\u0027andrew\u0027)]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1538445104669_1252826576",
+      "id": "20181002-015144_819966029",
+      "dateCreated": "2018-10-02 01:51:44.669",
+      "dateStarted": "2018-10-02 13:40:56.950",
+      "dateFinished": "2018-10-02 13:40:58.593",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%pyspark\n",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-02 01:53:03.139",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1538445183138_-1479678629",
+      "id": "20181002-015303_1469376805",
+      "dateCreated": "2018-10-02 01:53:03.138",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "CleaningData",
+  "id": "2DTXQHE47",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}
