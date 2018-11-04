@@ -4,9 +4,9 @@ import sys
 data = ""
 for line in sys.stdin:
     data += line
-print("[")
+print("{ \"articles\": [")
 objs = data.split("\n")
 for obj in objs[0:len(objs)-2]:
     print(obj+",")
 print(objs[len(objs)-2])
-print("]")
+print("]}")
