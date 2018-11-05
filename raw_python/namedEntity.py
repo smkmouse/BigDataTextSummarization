@@ -3,13 +3,12 @@ from spacy import displacy
 from collections import Counter
 import en_core_web_sm
 nlp = en_core_web_sm.load()
-
-def xstr(s):
-    return '' if s is None else str(s)
-
 import json
-json = json.loads(open('fixedJSON.json').read())
-for article in json['articles']:
+from multiprocessing import Pool
+
+def namedEntityExtract(article):
+    global printLock
+    outString = ""
     doc=nlp(article['Sentences'])
     for X in doc:
         isEnt = False
@@ -17,6 +16,12 @@ for article in json['articles']:
             if X.i >= y.start and X.i < y.end:
                 isEnt = True
                 if X.i == y.start:
-                    print(y.text, y.label_)
+                    outString += y.text+", "+y.label_+'\n'
         if not isEnt:
-            print(X.text, X.tag_)
+            outString += X.text+", "+X.tag_+'\n'
+    return outString
+
+json = json.loads(open('fixedJSON.json').read())
+with Pool(40) as p:
+    print(p.map(namedEntityExtract, json['articles']))
+    
