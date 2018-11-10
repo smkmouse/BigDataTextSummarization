@@ -4,7 +4,9 @@ from collections import Counter
 import en_core_web_sm
 nlp = en_core_web_sm.load()
 import json
-from multiprocessing import Pool
+from multiprocessing import Pool, Lock
+
+printLock = Lock()
 
 def namedEntityExtract(article):
     global printLock
@@ -16,12 +18,14 @@ def namedEntityExtract(article):
             if X.i >= y.start and X.i < y.end:
                 isEnt = True
                 if X.i == y.start:
-                    outString += y.text+", "+y.label_+'\n'
+                    outString = outString + y.text + " " + y.label_ + '\n'
         if not isEnt:
-            outString += X.text+", "+X.tag_+'\n'
-    return outString
+            outString = outString + X.text + " " + X.tag_ + '\n'
+    printLock.acquire()
+    print(outString)
+    printLock.release()
 
-json = json.loads(open('fixedJSON.json').read())
+json = json.loads(open('fixedBigData.json').read())
 with Pool(40) as p:
     print(p.map(namedEntityExtract, json['articles']))
     
