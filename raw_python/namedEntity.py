@@ -25,7 +25,6 @@ def namedEntityExtract(article):
     print(outString)
     printLock.release()
 
-json = json.loads(open('fixedBigData.json').read())
+json = json.loads(open('fixedJSON.json').read())
 with Pool(40) as p:
-    print(p.map(namedEntityExtract, json['articles']))
-    
+    p.map(namedEntityExtract, json['articles'])
