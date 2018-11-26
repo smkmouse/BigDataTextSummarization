@@ -120,17 +120,25 @@ if __name__ == "__main__":
                     sentence=[]
                 wordTypes.append((word[0],word[1][:-1]))
 
-    #print(lookMulti(strings, ["deaths", "michael"]))
-    #windspeed = intelliGrab(strings, ["winds", "mph"], "\d+ mph", "entity")
-    #deaths = intelliGrab(strings, ["deaths"], "\d+ deaths", "entity")
-    windspeed = regexNE(sentences, "CARDINAL", "winds.*MPH")[0]
+    #to extract one, use regexNE, and take the first result
+    #to extract multiple, use regexNE and send the output into the english lister,
+    #which gives a specified length list in english of the items returned by regexNE
+    windspeed = regexNE(sentences, "QUANTITY", "wind.*mph")[0]
     deaths = regexNE(sentences, "CARDINAL", "\d+.*deaths")[0]
-    damage = english_lister(regexNE(sentences, "GPE", "damage"), 7)
-    power = regexNE(sentences, "CARDINAL", "\d+.*homes.*power")[0]
+    damagePlaces = english_lister(regexNE(sentences, "GPE", "damage"), 7)
+    power = regexNE(sentences, "CARDINAL", "power.*outage")[0]
     orgs = english_lister(regexNE(sentences, "ORG", ".*"), 7)
+    looting = regexNE(sentences, "GPE", "looting")[0]
+    category = regexNE(sentences, "CARDINAL", "category")[0]
+    landfallDate = regexNE(sentences, "DATE", "landfall")[0]
+    landfallPlace = regexNE(sentences, "GPE", "landfall")[0]
+    evacuations = regexNE(sentences, "CARDINAL", "people.*evacuated")[0]
 
-    print("The wind speeds were measured to be "+windspeed+".")
-    print("The hurricane caused "+deaths+" deaths.")
-    print("Damage was reported in "+damage+".")
+
+    print("Hurricane Michael, a category "+category+" hurricane, made landfall on "+landfallDate+" in "+landfallPlace+"." )
+    print("The wind speeds were measured at "+windspeed+", and the hurricane caused "+deaths+" deaths as it traveled onto land.")
+    print("The largest amount of damage took place in "+damagePlaces+".")
     print(power+" homes lost power.")
     print(orgs+" were working to document the damage and assist the victims.")
+    print("There were also reports of looting in "+looting+".")
+    print(evacuations+" people were evacuated from their homes by authorities in anticipation of the storm.")
