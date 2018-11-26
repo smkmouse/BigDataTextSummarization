@@ -127,8 +127,10 @@ if __name__ == "__main__":
     deaths = regexNE(sentences, "CARDINAL", "\d+.*deaths")[0]
     damage = english_lister(regexNE(sentences, "GPE", "damage"), 7)
     power = regexNE(sentences, "CARDINAL", "\d+.*homes.*power")[0]
+    orgs = english_lister(regexNE(sentences, "ORG", ".*"), 7)
 
     print("The wind speeds were measured to be "+windspeed+".")
     print("The hurricane caused "+deaths+" deaths.")
     print("Damage was reported in "+damage+".")
     print(power+" homes lost power.")
+    print(orgs+" were working to document the damage and assist the victims.")
