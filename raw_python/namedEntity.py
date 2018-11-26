@@ -25,6 +25,6 @@ def namedEntityExtract(article):
     print(outString)
     printLock.release()
 
-json = json.loads(open('fixedJSON.json').read())
+json = json.loads(open('lda_filtered_docs_big_fixed.json').read())
 with Pool(40) as p:
     p.map(namedEntityExtract, json['articles'])

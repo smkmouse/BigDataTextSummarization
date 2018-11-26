@@ -5,8 +5,8 @@
 #File format is newline-delimited strings of interesting named-entity/verb pairs.
 #Warning: loads full file into memory.
 
-inFile = "templateProcessOutput.txt"
-namedEntityFile = "namedEntityResults.txt"
+inFile = "templateProcessOutputBigLDA.txt"
+namedEntityFile = "namedEntityResultsBigLDA.txt"
 
 import re
 
@@ -41,6 +41,18 @@ def lookMulti(strings, searchList):
 def most_common(lst):
     return max(set(lst), key=lst.count)
 
+def english_lister(strlist, number):
+        string = ""
+        for i in range(0, number):
+            if i is number-1:
+                string+="and "
+            string += strlist[i]
+            if i is not number-1:
+                string+=", "
+        return string
+
+
+
 def intelliGrab(strings, searchList, regex, getEntity):
     list = lookMulti(strings, searchList)
     if getEntity is "entity":
@@ -55,6 +67,38 @@ def intelliGrab(strings, searchList, regex, getEntity):
     #match based on regex
     return re.search(regex, str(list)).group()
 
+def regexNE(sentences, entityType, regex):
+    #go thru sentences, look for ones with both gpe and regex of interest. Filter by common
+    goodSentences = []
+    goodWords = []
+    for sentence in sentences:
+        hasEntity = False
+        hasSearchString = False
+        goodWord = ""
+        textSentence = ""
+        for word in sentence:
+            textSentence += word[0]
+            if entityType in word[1]:
+                hasEntity = True
+                goodWord = word[0]
+        if re.search(regex, textSentence):
+            hasSearchString = True
+        if hasEntity and hasSearchString:
+            goodSentences.append(sentence)
+            goodWords.append(goodWord)
+
+    goodWordsDict = {}
+    for x in goodWords:
+        try:
+            goodWordsDict[x] = goodWordsDict[x]+1
+        except KeyError:
+            goodWordsDict[x] = 1
+
+    tmp = sorted([(value, key) for (key,value) in goodWordsDict.items()], reverse = True)
+    goodWordsDedup = [y for x,y in tmp]
+    print(tmp)
+
+    return goodWordsDedup
 
 if __name__ == "__main__":
     strings = []
@@ -66,22 +110,25 @@ if __name__ == "__main__":
             strings.append(line[:-1].lower())
     with open(namedEntityFile) as f:
         #load file as sentences only and as word:type pairs
-        sentence = ""
+        sentence = []
         for line in f:
             word = line.split(" ")
             if len(word) is 2:
-                sentence = sentence + word[0]
+                sentence.append((word[0],word[1][:-1]))
                 if word[0] is ".":
                     sentences.append(sentence)
-                    sentence=""
-                wordTypes.append((word[0],word[1]))
+                    sentence=[]
+                wordTypes.append((word[0],word[1][:-1]))
 
-    print(lookMulti(strings, ["deaths", "michael"]))
-    windspeed = intelliGrab(strings, ["winds", "mph"], "\d+ mph", "entity")
-    deaths = intelliGrab(strings, ["deaths"], "\d+ deaths", "entity")
-    damage = intelliGrab(strings, ["damage"], ".+", "merge")
-    #for damage, try running through intelligrab results and pick one with a gpe (run thru spacy again)
+    #print(lookMulti(strings, ["deaths", "michael"]))
+    #windspeed = intelliGrab(strings, ["winds", "mph"], "\d+ mph", "entity")
+    #deaths = intelliGrab(strings, ["deaths"], "\d+ deaths", "entity")
+    windspeed = regexNE(sentences, "CARDINAL", "winds.*MPH")[0]
+    deaths = regexNE(sentences, "CARDINAL", "\d+.*deaths")[0]
+    damage = english_lister(regexNE(sentences, "GPE", "damage"), 7)
+    power = regexNE(sentences, "CARDINAL", "\d+.*homes.*power")[0]
 
     print("The wind speeds were measured to be "+windspeed+".")
-    print("The hurricane caused "+deaths+".")
-    print("An extensive source of damage was "+damage+".")
+    print("The hurricane caused "+deaths+" deaths.")
+    print("Damage was reported in "+damage+".")
+    print(power+" homes lost power.")

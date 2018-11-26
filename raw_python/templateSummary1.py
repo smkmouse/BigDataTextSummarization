@@ -9,7 +9,7 @@ import multiprocessing
 from multiprocessing import Manager, Pool
 
 #README: Specify input file at inputFile var below, output goes to standard out and should be redirected
-inputFile = "fixedJSON.json" #expects valid json, not spark json
+inputFile = "lda_filtered_docs_big_fixed.json" #expects valid json, not spark json (use listify.py)
 def runSpacy(article):
     outString = ""
     doc=nlp(article['Sentences'])
